@@ -66,4 +66,16 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 128)
 pdf.cell(0, 0, 'ja')
 
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 138)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 143)
+pdf.cell(0, 0, 'zusätzlich angebracht?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 148)
+pdf.cell(0, 0, 'ja')
+
 pdf.output("sicherheitsregeln.pdf", "F")
