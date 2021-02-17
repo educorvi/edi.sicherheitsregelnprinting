@@ -86,4 +86,25 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 173)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
 
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 208)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 213)
+pdf.cell(0, 0, 'eingebaut?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 218)
+pdf.cell(0, 0, 'zu Hause')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 228)
+pdf.cell(0, 0, 'Begründung:')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 233)
+pdf.cell(0, 0, 'Weil ichs kann')
+
+
 pdf.output("sicherheitsregeln.pdf", "F")
