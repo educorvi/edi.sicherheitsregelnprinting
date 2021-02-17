@@ -54,4 +54,16 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 108)
 pdf.cell(0, 0, 'ja')
 
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 118)
+pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 123)
+pdf.cell(0, 0, 'Betriebsraum verschlossen?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 128)
+pdf.cell(0, 0, 'ja')
+
 pdf.output("sicherheitsregeln.pdf", "F")
