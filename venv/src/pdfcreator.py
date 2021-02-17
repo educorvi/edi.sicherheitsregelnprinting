@@ -78,6 +78,8 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 148)
 pdf.cell(0, 0, 'ja')
 
+# 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 168)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
@@ -85,6 +87,8 @@ pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 173)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
+
+# 4 Geerdet und kurzgeschlossen
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 208)
@@ -105,6 +109,8 @@ pdf.cell(0, 0, 'Begründung:')
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 233)
 pdf.cell(0, 0, 'Weil ichs kann')
+
+# 5 Mit der Abdeckung soll erreicht werden
 
 
 pdf.output("sicherheitsregeln.pdf", "F")
