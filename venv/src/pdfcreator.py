@@ -78,4 +78,12 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 148)
 pdf.cell(0, 0, 'ja')
 
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 168)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 173)
+pdf.cell(0, 0, '3M Voltage Meter x559m')
+
 pdf.output("sicherheitsregeln.pdf", "F")
