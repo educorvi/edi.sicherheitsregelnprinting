@@ -6,6 +6,8 @@ pdf.add_page()
 #pdf.image("5-Sicherheitsregeln-Vorlage-JPG.jpg", x=-4, y=-8, w=217, h=313)
 pdf.image("vorlage-JPG.jpg", x=-4, y=-8, w=217, h=313)
 
+# 1 Freigeschaltet
+
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 31)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
@@ -37,5 +39,19 @@ pdf.cell(0, 0, 'Nr. oder Bezeichnung Umspannwerk')
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 81)
 pdf.cell(0, 0, '459')
+
+# 2 Gegen Wiedereinschalten gesichert
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 98)
+pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 103)
+pdf.cell(0, 0, 'Schalter eingehängt und abgeschlossen?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 108)
+pdf.cell(0, 0, 'ja')
 
 pdf.output("sicherheitsregeln.pdf", "F")
