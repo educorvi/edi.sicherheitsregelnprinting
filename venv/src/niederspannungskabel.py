@@ -52,40 +52,12 @@ pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 # 2 Gegen Wiedereinschalten gesichert
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 100)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 105)
-pdf.cell(0, 0, '')
+pdf.set_xy(108, 124)
+pdf.cell(0, 0, 'Wie wurde gesichert?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 110)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 120)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 125)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 130)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 140)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 145)
-pdf.cell(0, 0, '')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 150)
-pdf.cell(0, 0, '')
+pdf.set_xy(108, 129)
+pdf.cell(0, 0, 'Steuersicherung entfernt')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
