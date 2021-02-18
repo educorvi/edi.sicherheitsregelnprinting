@@ -13,7 +13,7 @@ pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 36)
-pdf.cell(0, 0, 'NH-Sicherungen')
+pdf.cell(0, 0, 'NH-Lastschaltleiste')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 46)
@@ -25,11 +25,7 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 61)
-pdf.cell(0, 0, 'Trafostation')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 71)
-pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % '55934')
+pdf.cell(0, 0, 'Unterverteilung %s ' % '55934')
 
 # 2 Gegen Wiedereinschalten gesichert
 
