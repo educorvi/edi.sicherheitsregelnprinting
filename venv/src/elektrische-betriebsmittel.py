@@ -52,4 +52,4 @@ pdf.set_xy(108, 251)
 pdf.cell(0, 0, '')
 
 
-pdf.output("elektrohandwerk-betriebsmittel.pdf", "F")
+pdf.output("elektrische-betriebsmittel.pdf", "F")
