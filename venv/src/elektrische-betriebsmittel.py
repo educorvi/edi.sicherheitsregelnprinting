@@ -3,7 +3,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
-pdf.image("elektrische-betriebsmittel-vorlage.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("vorlage2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
