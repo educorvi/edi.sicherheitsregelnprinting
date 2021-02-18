@@ -115,5 +115,8 @@ pdf.cell(0, 0, '3M Voltage Meter x559m')
 
 # 4 Geerdet und kurzgeschlossen
 
+pdf.add_page()
+pdf.image("vorlage3-Seite1.jpg", x=-4, y=-8, w=217, h=313)
+
 
 pdf.output("niederspannungskabel.pdf", "F")
