@@ -99,7 +99,7 @@ pdf.cell(0, 0, 'eingebaut?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 218)
-pdf.cell(0, 0, 'zu Hause')
+pdf.cell(0, 0, 'in die NH-Sicherungsunterteile')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 228)
@@ -118,14 +118,5 @@ pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 256)
 pdf.cell(0, 0, 'Nichts')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 266)
-pdf.cell(0, 0, 'Art der Abdeckung:')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 271)
-pdf.cell(0, 0, 'isolierende Formteile')
-
 
 pdf.output("unterverteilungen.pdf", "F")
