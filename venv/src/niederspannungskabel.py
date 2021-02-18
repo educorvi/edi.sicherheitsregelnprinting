@@ -5,7 +5,7 @@ pdf.add_page()
 
 pdf.image("vorlage3-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
-# 1 Freigeschaltet
+# 1a Freigeschaltet Ausschaltstelle 1
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 31)
@@ -27,43 +27,65 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 61)
 pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 
+# 1b Freigeschaltet Ausschaltstelle 2
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 98)
+pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 103)
+pdf.cell(0, 0, 'NH-Lastschaltleiste')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 113)
+pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 123)
+pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 128)
+pdf.cell(0, 0, 'Trafostation %s ' % '55934')
+
 # 2 Gegen Wiedereinschalten gesichert
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 100)
-pdf.cell(0, 0, 'Wurde ein Vorhaengeschloss am')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 105)
-pdf.cell(0, 0, 'Schalter eingehaengt und abgeschlossen?')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 110)
-pdf.cell(0, 0, 'ja')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 120)
-pdf.cell(0, 0, 'Wurde die Tuer zum elektrischen')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 125)
-pdf.cell(0, 0, 'Betriebsraum verschlossen?')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 130)
-pdf.cell(0, 0, 'ja')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 140)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 145)
-pdf.cell(0, 0, 'zusätzlich angebracht?')
+pdf.cell(0, 0, '')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 150)
-pdf.cell(0, 0, 'magnetisch')
+pdf.cell(0, 0, '')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
