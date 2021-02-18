@@ -31,11 +31,11 @@ pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 100)
-pdf.cell(0, 0, 'Wurde ein Vorhaengeschloss am Schalter')
+pdf.cell(0, 0, 'Wurde ein Vorhaengeschloss am')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 105)
-pdf.cell(0, 0, 'eingehaengt und abgeschlossen?')
+pdf.cell(0, 0, 'Schalter eingehaengt und abgeschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 110)
@@ -43,11 +43,11 @@ pdf.cell(0, 0, 'ja')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 120)
-pdf.cell(0, 0, 'Wurde die Tuer zum Betriebsraum')
+pdf.cell(0, 0, 'Wurde die Tuer zum elektrischen')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 125)
-pdf.cell(0, 0, 'verschlossen?')
+pdf.cell(0, 0, 'Betriebsraum verschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 130)
