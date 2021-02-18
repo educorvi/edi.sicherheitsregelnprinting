@@ -29,12 +29,8 @@ pdf.set_xy(108, 61)
 pdf.cell(0, 0, 'Trafostation')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 76)
-pdf.cell(0, 0, 'Nr. oder Bezeichnung Umspannwerk')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 81)
-pdf.cell(0, 0, '459')
+pdf.set_xy(108, 71)
+pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % '55934')
 
 # 2 Gegen Wiedereinschalten gesichert
 
