@@ -30,39 +30,39 @@ pdf.cell(0, 0, 'Unterverteilung %s ' % '55934')
 # 2 Gegen Wiedereinschalten gesichert
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 98)
-pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am')
+pdf.set_xy(108, 100)
+pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 103)
-pdf.cell(0, 0, 'Schalter eingehängt und abgeschlossen?')
+pdf.set_xy(108, 105)
+pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 108)
+pdf.set_xy(108, 110)
 pdf.cell(0, 0, 'ja')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 118)
-pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
+pdf.set_xy(108, 120)
+pdf.cell(0, 0, 'Wurde eine Schaltsperre eingesetzt, weil')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 123)
-pdf.cell(0, 0, 'Betriebsraum verschlossen?')
+pdf.set_xy(108, 125)
+pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 128)
+pdf.set_xy(108, 130)
 pdf.cell(0, 0, 'ja')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 138)
+pdf.set_xy(108, 140)
 pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 143)
+pdf.set_xy(108, 145)
 pdf.cell(0, 0, 'zusätzlich angebracht?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 148)
+pdf.set_xy(108, 150)
 pdf.cell(0, 0, 'ja')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
