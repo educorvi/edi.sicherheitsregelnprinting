@@ -59,6 +59,18 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 129)
 pdf.cell(0, 0, 'Steuersicherung entfernt')
 
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 139)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 144)
+pdf.cell(0, 0, 'zusaetzlich angebracht?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 149)
+pdf.cell(0, 0, 'magnetisch')
+
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
 pdf.set_font('Arial', '', 14)
