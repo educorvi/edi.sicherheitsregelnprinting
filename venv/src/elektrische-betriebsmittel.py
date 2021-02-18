@@ -3,7 +3,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
-pdf.image("elektrohandwerk-schaltanlagen-vorlage.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("elektrische-betriebsmittel-vorlage.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
@@ -30,8 +30,16 @@ pdf.cell(0, 0, 'Trafostation')
 # 2 Gegen Wiedereinschalten gesichert
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 98)
-pdf.cell(0, 0, '')
+pdf.set_xy(108, 83)
+pdf.cell(0, 0, 'Wurde ein Sperrlement eingesetzt, weil')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 88)
+pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 93)
+pdf.cell(0, 0, 'ja')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
