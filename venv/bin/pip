@@ -1,4 +1,4 @@
-#!/Users/seppowalther/Dropbox/Arbeit/5Sicherheitsregeln/venv/bin/python
+#!/Users/seppowalther/PycharmProjects/5Sicherheitsregeln/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
