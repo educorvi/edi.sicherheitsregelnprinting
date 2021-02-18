@@ -3,8 +3,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
-#pdf.image("5-Sicherheitsregeln-Vorlage-JPG.jpg", x=-4, y=-8, w=217, h=313)
-pdf.image("vorlage-JPG.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("elektrohandwerk-schaltanlagen-vorlage.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
@@ -121,4 +120,4 @@ pdf.set_xy(108, 271)
 pdf.cell(0, 0, 'isolierende Formteile')
 
 
-pdf.output("sicherheitsregeln.pdf", "F")
+pdf.output("elektrohandwerk-schaltanlagen.pdf", "F")
