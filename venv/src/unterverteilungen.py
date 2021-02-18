@@ -25,7 +25,7 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 61)
-pdf.cell(0, 0, 'Unterverteilung %s ' % '55934')
+pdf.cell(0, 0, 'Hauptverteilung %s ' % '55934')
 
 # 2 Gegen Wiedereinschalten gesichert
 
@@ -43,11 +43,11 @@ pdf.cell(0, 0, 'ja')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 120)
-pdf.cell(0, 0, 'Wurde eine Schaltsperre eingesetzt, weil')
+pdf.cell(0, 0, 'Wurde die Tuer zum Betriebsraum')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 125)
-pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
+pdf.cell(0, 0, 'verschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 130)
@@ -63,7 +63,7 @@ pdf.cell(0, 0, 'zusätzlich angebracht?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 150)
-pdf.cell(0, 0, 'ja')
+pdf.cell(0, 0, 'magnetisch')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
