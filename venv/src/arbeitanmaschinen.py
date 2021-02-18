@@ -49,14 +49,24 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 100)
 pdf.cell(0, 0, 'magnetisch')
 
-# 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+# 3a Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 178)
+pdf.set_xy(108, 122)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 183)
+pdf.set_xy(108, 127)
+pdf.cell(0, 0, '3M Voltage Meter x559m')
+
+# 3b Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 157)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 163)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
 
 # 4 Geerdet und kurzgeschlossen
