@@ -113,14 +113,30 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 270)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
 
-# 4 Geerdet und kurzgeschlossen
+# 4a Geerdet und kurzgeschlossen Ausschaltstelle 1
+
+"""
+Work in progress
+"""
+
+# 4b Geerdet und krzgeschlossen Ausschaltstelle 2
+
+"""
+Work in progress
+"""
+
+# 5 Mit der Abdeckung soll erreicht werden
 
 pdf.add_page()
 pdf.image("vorlage3-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 98)
+pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
+
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 300)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_xy(108, 103)
+pdf.cell(0, 0, 'Nichts')
 
 
 pdf.output("niederspannungskabel.pdf", "F")
