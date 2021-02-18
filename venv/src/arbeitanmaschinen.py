@@ -72,33 +72,33 @@ pdf.cell(0, 0, '3M Voltage Meter x559m')
 # 4 Geerdet und kurzgeschlossen
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 208)
+pdf.set_xy(108, 187)
 pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 213)
+pdf.set_xy(108, 193)
 pdf.cell(0, 0, 'eingebaut?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 218)
+pdf.set_xy(108, 198)
 pdf.cell(0, 0, 'in die NH-Sicherungsunterteile')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 228)
+pdf.set_xy(108, 208)
 pdf.cell(0, 0, 'Begründung:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 233)
+pdf.set_xy(108, 213)
 pdf.cell(0, 0, 'Weil ichs kann')
 
 # 5 Mit der Abdeckung soll erreicht werden
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 251)
+pdf.set_xy(108, 245)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 256)
+pdf.set_xy(108, 250)
 pdf.cell(0, 0, 'Nichts')
 
 pdf.output("arbeitanmaschinen.pdf", "F")
