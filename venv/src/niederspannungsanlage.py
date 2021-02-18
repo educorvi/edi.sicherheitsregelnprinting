@@ -31,48 +31,32 @@ pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 100)
-pdf.cell(0, 0, 'Wurde ein Vorhaengeschloss am')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 105)
-pdf.cell(0, 0, 'Schalter eingehaengt und abgeschlossen?')
+pdf.cell(0, 0, 'Wie wurde gesichert?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 110)
-pdf.cell(0, 0, 'ja')
+pdf.set_xy(108, 105)
+pdf.cell(0, 0, 'Steuersicherung entfernt')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 120)
-pdf.cell(0, 0, 'Wurde die Tuer zum elektrischen')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 125)
-pdf.cell(0, 0, 'Betriebsraum verschlossen?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 130)
-pdf.cell(0, 0, 'ja')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 140)
 pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 145)
+pdf.set_xy(108, 125)
 pdf.cell(0, 0, 'zusätzlich angebracht?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 150)
-pdf.cell(0, 0, 'magnetisch')
+pdf.set_xy(108, 130)
+pdf.cell(0, 0, 'magnetisch befestigt')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 168)
+pdf.set_xy(108, 178)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 173)
+pdf.set_xy(108, 183)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
 
 # 4 Geerdet und kurzgeschlossen
