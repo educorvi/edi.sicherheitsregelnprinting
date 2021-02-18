@@ -49,7 +49,7 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 108)
 pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 
-# 2 Gegen Wiedereinschalten gesichert
+# 2a Gegen Wiedereinschalten gesichert Ausschaltstelle 1
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 124)
@@ -71,46 +71,31 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 149)
 pdf.cell(0, 0, 'magnetisch')
 
-# 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+# 2b Gegen Wiedereinschalten gesichert Ausschaltstelle 1
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 168)
-pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+pdf.set_xy(108, 171)
+pdf.cell(0, 0, 'Wie wurde gesichert?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 173)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_xy(108, 176)
+pdf.cell(0, 0, 'Steuersicherung entfernt')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 186)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 191)
+pdf.cell(0, 0, 'zusaetzlich angebracht?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 196)
+pdf.cell(0, 0, 'magnetisch')
+
+# 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 208)
-pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 213)
-pdf.cell(0, 0, 'eingebaut?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 218)
-pdf.cell(0, 0, 'in die NH-Sicherungsunterteile')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 228)
-pdf.cell(0, 0, 'Begründung:')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 233)
-pdf.cell(0, 0, 'Weil ichs kann')
-
-# 5 Mit der Abdeckung soll erreicht werden
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 251)
-pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 256)
-pdf.cell(0, 0, 'Nichts')
 
 pdf.output("niederspannungskabel.pdf", "F")
