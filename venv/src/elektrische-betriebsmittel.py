@@ -92,13 +92,29 @@ pdf.cell(0, 0, '3M Voltage Meter x559m')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 208)
-pdf.cell(0, 0, '')
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(108, 213)
+pdf.cell(0, 0, 'eingebaut?')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 223)
+pdf.cell(0, 0, 'Nicht geerdet und kurzgeschlossen, weil:')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 228)
+pdf.cell(0, 0, 'Kein Bock')
 
 # 5 Mit der Abdeckung soll erreicht werden
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 251)
-pdf.cell(0, 0, '')
+pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(108, 256)
+pdf.cell(0, 0, 'Nichts')
 
 
 pdf.output("elektrische-betriebsmittel.pdf", "F")
