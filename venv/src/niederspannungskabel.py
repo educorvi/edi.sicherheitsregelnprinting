@@ -30,23 +30,23 @@ pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 # 1b Freigeschaltet Ausschaltstelle 2
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 98)
+pdf.set_xy(108, 78)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 103)
+pdf.set_xy(108, 83)
 pdf.cell(0, 0, 'NH-Lastschaltleiste')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 113)
+pdf.set_xy(108, 93)
 pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 123)
+pdf.set_xy(108, 103)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 128)
+pdf.set_xy(108, 108)
 pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 
 # 2 Gegen Wiedereinschalten gesichert
