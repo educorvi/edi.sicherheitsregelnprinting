@@ -75,18 +75,6 @@ pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 173)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 183)
-pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden,')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 188)
-pdf.cell(0, 0, 'z.B. USV, PV, Notstromaggregat?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 193)
-pdf.cell(0, 0, 'ja')
-
 # 4 Geerdet und kurzgeschlossen
 
 pdf.set_font('Arial', '', 14)
