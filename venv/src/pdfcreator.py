@@ -18,18 +18,14 @@ pdf.cell(0, 0, 'NH-Sicherungen')
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 46)
-pdf.cell(0, 0, 'Auslösestrom NH-Sicherungen:')
+pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 51)
-pdf.cell(0, 0, '_________ A')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 61)
+pdf.set_xy(108, 56)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 66)
+pdf.set_xy(108, 61)
 pdf.cell(0, 0, 'Trafostation')
 
 pdf.set_font('Arial', '', 14)
