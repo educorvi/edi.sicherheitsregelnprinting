@@ -30,24 +30,24 @@ pdf.cell(0, 0, 'Trafostation %s ' % '55934')
 # 2 Gegen Wiedereinschalten gesichert
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 100)
-pdf.cell(0, 0, 'Wie wurde gesichert?')
+pdf.set_xy(108, 75)
+pdf.cell(0, 0, 'Wie erfolgte die Sicherung?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 105)
+pdf.set_xy(108, 80)
 pdf.cell(0, 0, 'Steuersicherung entfernt')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 120)
+pdf.set_xy(108, 90)
 pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 125)
+pdf.set_xy(108, 95)
 pdf.cell(0, 0, 'zusätzlich angebracht?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 130)
-pdf.cell(0, 0, 'magnetisch befestigt')
+pdf.set_xy(108, 100)
+pdf.cell(0, 0, 'magnetisch')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
