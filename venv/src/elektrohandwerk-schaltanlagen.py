@@ -8,6 +8,44 @@ pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 data = {}
 data["art_der_freischaltung"] = "NH-Sicherungen"
 
+# Kopffragen
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(3, 74)
+pdf.cell(0, 0, 'educorvi GmbH & Co. KG')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(3, 92)
+pdf.cell(0, 0, '01.03.2021')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(3, 110)
+pdf.cell(0, 0, 'Lars Walther')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(3, 128.5)
+pdf.cell(0, 0, 'Lars Walther')
+
+pdf.set_font('Arial', 'u', 14)
+pdf.set_xy(3, 146.5)
+pdf.cell(0, 0, 'Seppo Walther')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(4.4, 173.6)
+pdf.cell(0, 0, 'x')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(78.7, 173.6)
+pdf.cell(0, 0, 'x')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(4.3, 199.9)
+pdf.cell(0, 0, 'x')
+
+pdf.set_font('Arial', '', 14)
+pdf.set_xy(27.5, 199.9)
+pdf.cell(0, 0, 'x')
+
 # 1 Freigeschaltet
 
 pdf.set_font('Arial', '', 14)
