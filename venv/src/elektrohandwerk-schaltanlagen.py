@@ -6,45 +6,55 @@ pdf.add_page()
 pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
+data["arbeitsstelle"] = "educorvi GmbG & Co. KG"
+data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
+data["person_anlageverantwortlichkeit"] = "Lars Walther"
+data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
+data["person_arbeitsausfuehrung"] = "Seppo Walther"
+data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
+data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
+data["abgrenzung_arbeitsbereich_ja"] = "x"
+data["abgrenzung_arbeitsbereich_nein"] = "x"
+
 data["art_der_freischaltung"] = "NH-Sicherungen"
 
 # Kopffragen
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(3, 74)
-pdf.cell(0, 0, 'educorvi GmbH & Co. KG')
+pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(3, 92)
-pdf.cell(0, 0, '01.03.2021')
+pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(3, 110)
-pdf.cell(0, 0, 'Lars Walther')
+pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(3, 128.5)
-pdf.cell(0, 0, 'Lars Walther')
+pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(3, 146.5)
-pdf.cell(0, 0, 'Seppo Walther')
+pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(4.4, 173.6)
-pdf.cell(0, 0, 'x')
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(78.7, 173.6)
-pdf.cell(0, 0, 'x')
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(4.3, 199.9)
-pdf.cell(0, 0, 'x')
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(27.5, 199.9)
-pdf.cell(0, 0, 'x')
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
 
