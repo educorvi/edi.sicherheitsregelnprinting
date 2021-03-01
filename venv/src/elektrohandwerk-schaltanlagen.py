@@ -36,23 +36,23 @@ data["art_der_abdeckung"] = "isolierende Formteile"
 
 # Kopffragen
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('Arial', '', 14)
 pdf.set_xy(8, 74)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('Arial', '', 14)
 pdf.set_xy(8, 92)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('Arial', '', 14)
 pdf.set_xy(8, 110)
 pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('Arial', '', 14)
 pdf.set_xy(8, 128.5)
 pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('Arial', '', 14)
 pdf.set_xy(8, 146.5)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
