@@ -21,6 +21,10 @@ data["ausloesestrom"] = "50"
 data["ort_der_freischaltung"] = "Trafostation"
 data["ort_nroderbezeichnung"] = "55934"
 
+data["vorhaengeschloss_schalter"] = "ja"
+data["betriebsraum_tuer_verschlossen"] = "ja"
+data["schalten_verboten"] = "ja"
+
 # Kopffragen
 
 pdf.set_font('Arial', 'u', 14)
@@ -102,7 +106,7 @@ pdf.cell(0, 0, 'Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 33)
-pdf.cell(0, 0, 'ja')
+pdf.cell(0, 0, data.get("vorhaengeschloss_schalter"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 43)
@@ -114,7 +118,7 @@ pdf.cell(0, 0, 'Betriebsraum verschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 53)
-pdf.cell(0, 0, 'ja')
+pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 63)
@@ -126,7 +130,7 @@ pdf.cell(0, 0, 'zusätzlich angebracht?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 73)
-pdf.cell(0, 0, 'ja')
+pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
