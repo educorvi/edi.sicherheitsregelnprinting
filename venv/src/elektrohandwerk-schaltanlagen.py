@@ -42,89 +42,89 @@ pdf.image("vorlage5-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 # 2 Gegen Wiedereinschalten gesichert
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 98)
+pdf.set_xy(108, 22)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 103)
+pdf.set_xy(108, 27)
 pdf.cell(0, 0, 'Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 108)
+pdf.set_xy(108, 33)
 pdf.cell(0, 0, 'ja')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 118)
+pdf.set_xy(108, 43)
 pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 123)
+pdf.set_xy(108, 48)
 pdf.cell(0, 0, 'Betriebsraum verschlossen?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 128)
+pdf.set_xy(108, 53)
 pdf.cell(0, 0, 'ja')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 138)
+pdf.set_xy(108, 63)
 pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 143)
+pdf.set_xy(108, 68)
 pdf.cell(0, 0, 'zusätzlich angebracht?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 148)
+pdf.set_xy(108, 73)
 pdf.cell(0, 0, 'ja')
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 168)
+pdf.set_xy(108, 89)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 173)
+pdf.set_xy(108, 99)
 pdf.cell(0, 0, '3M Voltage Meter x559m')
 
 # 4 Geerdet und kurzgeschlossen
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 208)
+pdf.set_xy(108, 130)
 pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 213)
+pdf.set_xy(108, 135)
 pdf.cell(0, 0, 'eingebaut?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 218)
+pdf.set_xy(108, 140)
 pdf.cell(0, 0, 'zu Hause')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 228)
+pdf.set_xy(108, 150)
 pdf.cell(0, 0, 'Begründung:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 233)
+pdf.set_xy(108, 155)
 pdf.cell(0, 0, 'Weil ichs kann')
 
 # 5 Mit der Abdeckung soll erreicht werden
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 251)
+pdf.set_xy(108, 170)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 256)
+pdf.set_xy(108, 175)
 pdf.cell(0, 0, 'Nichts')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 266)
+pdf.set_xy(108, 185)
 pdf.cell(0, 0, 'Art der Abdeckung:')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 271)
+pdf.set_xy(108, 190)
 pdf.cell(0, 0, 'isolierende Formteile')
 
 
