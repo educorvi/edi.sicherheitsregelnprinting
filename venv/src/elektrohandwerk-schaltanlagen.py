@@ -17,6 +17,9 @@ data["abgrenzung_arbeitsbereich_ja"] = "x"
 data["abgrenzung_arbeitsbereich_nein"] = "x"
 
 data["art_der_freischaltung"] = "NH-Sicherungen"
+data["ausloesestrom"] = "50"
+data["ort_der_freischaltung"] = "Trafostation"
+data["ort_nroderbezeichnung"] = "55934"
 
 # Kopffragen
 
@@ -68,7 +71,7 @@ pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 245)
-pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
+pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 255)
@@ -76,11 +79,11 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 260)
-pdf.cell(0, 0, 'Trafostation')
+pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 270)
-pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % '55934')
+pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 #Adding new page
 
