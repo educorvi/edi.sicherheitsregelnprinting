@@ -41,35 +41,35 @@ pdf.set_xy(8, 74)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(3, 92)
+pdf.set_xy(8, 92)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(3, 110)
+pdf.set_xy(8, 110)
 pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(3, 128.5)
+pdf.set_xy(8, 128.5)
 pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(3, 146.5)
+pdf.set_xy(8, 146.5)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(4.4, 173.6)
+pdf.set_xy(9.4, 173.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(78.7, 173.6)
+pdf.set_xy(83.7, 173.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(4.3, 199.9)
+pdf.set_xy(9.3, 199.9)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(27.5, 199.9)
+pdf.set_xy(32.5, 199.9)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
