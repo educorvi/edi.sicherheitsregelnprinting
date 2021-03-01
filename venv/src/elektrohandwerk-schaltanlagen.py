@@ -3,7 +3,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
-pdf.image("vorlage1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
 data["art_der_freischaltung"] = "NH-Sicherungen"
@@ -11,28 +11,33 @@ data["art_der_freischaltung"] = "NH-Sicherungen"
 # 1 Freigeschaltet
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 31)
+pdf.set_xy(108, 230)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 36)
+pdf.set_xy(108, 235)
 pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 46)
+pdf.set_xy(108, 245)
 pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 56)
+pdf.set_xy(108, 255)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 61)
+pdf.set_xy(108, 260)
 pdf.cell(0, 0, 'Trafostation')
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 71)
+pdf.set_xy(108, 270)
 pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % '55934')
+
+#Adding new page
+
+pdf.add_page()
+pdf.image("vorlage5-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
