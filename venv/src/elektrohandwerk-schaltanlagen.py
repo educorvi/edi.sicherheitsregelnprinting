@@ -25,6 +25,8 @@ data["vorhaengeschloss_schalter"] = "ja"
 data["betriebsraum_tuer_verschlossen"] = "ja"
 data["schalten_verboten"] = "ja"
 
+data["spannungspruefer"] = "3M Voltage Meter x559m"
+
 # Kopffragen
 
 pdf.set_font('Arial', 'u', 14)
@@ -140,7 +142,7 @@ pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 99)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
