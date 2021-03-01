@@ -27,6 +27,9 @@ data["schalten_verboten"] = "ja"
 
 data["spannungspruefer"] = "3M Voltage Meter x559m"
 
+data["euk_wo_eingebaut"] = "zu Hause"
+data["geerdet_begruendung"] = "weil ichs kann"
+
 # Kopffragen
 
 pdf.set_font('Arial', 'u', 14)
@@ -156,7 +159,7 @@ pdf.cell(0, 0, 'eingebaut?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 140)
-pdf.cell(0, 0, 'zu Hause')
+pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 150)
@@ -164,7 +167,7 @@ pdf.cell(0, 0, 'Begründung:')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 155)
-pdf.cell(0, 0, 'Weil ichs kann')
+pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
