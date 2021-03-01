@@ -27,49 +27,49 @@ data["schalten_verboten"] = "ja"
 
 data["spannungspruefer"] = "3M Voltage Meter x559m"
 
-data["euk_wo_eingebaut"] = "zu Hause"
-data["geerdet_begruendung"] = "weil ichs kann"
+data["euk_wo_eingebaut"] = "am richtigen Ort"
+data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
 
-data["ziel_der_abdeckung"] = "Nichts"
+data["ziel_der_abdeckung"] = "Personenschutz"
 data["art_der_abdeckung"] = "isolierende Formteile"
 
 
 # Kopffragen
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(8, 74)
+pdf.set_xy(12, 74)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(8, 92)
+pdf.set_xy(12, 92)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(8, 110)
+pdf.set_xy(12, 110)
 pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(8, 128.5)
+pdf.set_xy(12, 128.5)
 pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(8, 146.5)
+pdf.set_xy(12, 146.5)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(9.4, 173.6)
+pdf.set_xy(14.1, 173.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(83.7, 173.6)
+pdf.set_xy(88.4, 173.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(9.3, 199.9)
+pdf.set_xy(14, 199.9)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
 
 pdf.set_font('Arial', '', 14)
-pdf.set_xy(32.5, 199.9)
+pdf.set_xy(37.2, 199.9)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
