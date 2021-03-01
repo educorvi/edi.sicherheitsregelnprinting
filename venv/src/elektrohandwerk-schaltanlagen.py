@@ -30,6 +30,10 @@ data["spannungspruefer"] = "3M Voltage Meter x559m"
 data["euk_wo_eingebaut"] = "zu Hause"
 data["geerdet_begruendung"] = "weil ichs kann"
 
+data["ziel_der_abdeckung"] = "Nichts"
+data["art_der_abdeckung"] = "isolierende Formteile"
+
+
 # Kopffragen
 
 pdf.set_font('Arial', 'u', 14)
@@ -177,7 +181,7 @@ pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 175)
-pdf.cell(0, 0, 'Nichts')
+pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 185)
@@ -185,7 +189,7 @@ pdf.cell(0, 0, 'Art der Abdeckung:')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 190)
-pdf.cell(0, 0, 'isolierende Formteile')
+pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
 
 pdf.output("elektrohandwerk-schaltanlagen.pdf", "F")
