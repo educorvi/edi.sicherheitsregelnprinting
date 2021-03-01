@@ -5,6 +5,9 @@ pdf.add_page()
 
 pdf.image("vorlage1.jpg", x=-4, y=-8, w=217, h=313)
 
+data = {}
+data["art_der_freischaltung"] = "NH-Sicherungen"
+
 # 1 Freigeschaltet
 
 pdf.set_font('Arial', '', 14)
@@ -13,7 +16,7 @@ pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 36)
-pdf.cell(0, 0, 'NH-Sicherungen')
+pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 46)
