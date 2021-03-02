@@ -18,8 +18,8 @@ data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-
 data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
 # Multiple-Choice-Felder (?):
-data["zusaetzliche_schutzausrüstung"] = input.get('#/properties/zusatzliche-personliche-schutzausrustung')
-data["abgrenzung_arbeitsbereich"] = input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder')
+# data["zusaetzliche_schutzausrüstung"] = input.get('#/properties/zusatzliche-personliche-schutzausrustung')
+# data["abgrenzung_arbeitsbereich"] = input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder')
 """
 
 data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
@@ -31,6 +31,14 @@ data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 data["abgrenzung_arbeitsbereich_ja"] = "x"
 data["abgrenzung_arbeitsbereich_nein"] = "x"
+
+"""
+# Verbindung zwischen ausloesestrom und art_der_freischaltung?
+# data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+# data["ausloesestrom"] = "50"
+data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+# data["ort_nroderbezeichnung"] = "55934"
+"""
 
 data["art_der_freischaltung"] = "NH-Sicherungen"
 data["ausloesestrom"] = "50"
