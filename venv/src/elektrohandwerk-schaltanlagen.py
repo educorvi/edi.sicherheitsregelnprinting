@@ -4,6 +4,8 @@ from importdata import input
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
+pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
+
 pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
@@ -38,39 +40,39 @@ data["art_der_abdeckung"] = "isolierende Formteile"
 
 # Kopffragen
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(12, 74)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(12, 92)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(12, 110)
 pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(12, 128.5)
 pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(12, 146.5)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(14.1, 173.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(88.4, 173.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(14, 199.9)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(37.2, 199.9)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
