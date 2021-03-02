@@ -36,9 +36,9 @@ data["abgrenzung_arbeitsbereich_nein"] = "x"
 # 1
 """
 # Verbindung zwischen ausloesestrom und art_der_freischaltung?
-# data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+# data["art_der_freischaltung"] = input.get('#/properties/edi4961450e44ba4d16aeb015a919e73f0a')
 # data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+data["ort_der_freischaltung"] = input.get('#/properties/edi2e32c9143f91464392d3ea5b72c1db89')
 # data["ort_nroderbezeichnung"] = "55934"
 """
 
@@ -48,9 +48,9 @@ data["ort_der_freischaltung"] = "Trafostation"
 
 # 2
 """
-data["sperrelement"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
-data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
-data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
+data["sperrelement"] = input.get('#/properties/edi36e713d0f0544afab38414b8d139fcec')
+data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi8aeb082703364653b77ecedfb294800c')
+data["schalten_verboten"] = input.get('#/properties/ediff3de7cc99c74d7a8d7fc9430714cc4d')
 """
 
 data["sperrelement"] = "ja"
@@ -59,8 +59,8 @@ data["schalten_verboten"] = "ja"
 
 # 3
 """
-data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
-data["usv"] = # to be filled
+data["spannungspruefer"] = input.get('#/properties/edi9b0ea2910d514df791e528597a6e5f28')
+data["usv"] = input.get('#/properties/edi94283112763649bda0ef6f900ddc2cbc')
 """
 
 data["spannungspruefer"] = "3M Voltage Meter x559m"
@@ -68,8 +68,8 @@ data["usv"] = "ja"
 
 # 4
 """
-data["euk_wo_eingebaut"] = input.get('#/properties/ediec7dc4dfa3b646818f003c01c9f1709c')
-data["geerdet_begruendung"] = input.get('#/properties/edibc2aa174fac14dc68fdce90b73990e62')
+data["euk_wo_eingebaut"] = input.get('#/properties/edibba761f4767d4a3b9f1528712f8f1abe')
+data["geerdet_begruendung"] = input.get('#/properties/edibba761f4767d4a3b9f1528712f8f1abe')
 """
 
 data["euk_wo_eingebaut"] = "am richtigen Ort"
@@ -77,7 +77,7 @@ data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
 
 # 5
 """
-data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
+data["ziel_der_abdeckung"] = input.get('#/properties/edi94f9841893d04f6184e06a9b57797e59')
 """
 
 data["ziel_der_abdeckung"] = "Personenschutz"
