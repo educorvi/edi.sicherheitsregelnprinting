@@ -64,6 +64,17 @@ data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d96
 
 data["spannungspruefer"] = "3M Voltage Meter x559m"
 
+# 4
+"""
+data["euk_wo_eingebaut"] = input.get('#/properties/ediec7dc4dfa3b646818f003c01c9f1709c')
+data["geerdet_begruendung"] = input.get('#/properties/edibc2aa174fac14dc68fdce90b73990e62')
+"""
+
+data["euk_wo_eingebaut"] = "am richtigen Ort"
+data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
+
+
+
 
 # Kopffragen
 
@@ -180,9 +191,25 @@ pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
-"""
-to be filled
-"""
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 130)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 135)
+pdf.cell(0, 0, 'eingebaut?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 140)
+pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 150)
+pdf.cell(0, 0, 'Begründung:')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 155)
+pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
