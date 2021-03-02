@@ -1,5 +1,5 @@
 import pprint
-from example import data
+from example import data2
 
 pp = pprint.PrettyPrinter(indent=2)
-pp.pprint(data)
+pp.pprint(data2)
