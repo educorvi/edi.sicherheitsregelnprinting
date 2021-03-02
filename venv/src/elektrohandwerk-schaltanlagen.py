@@ -80,27 +80,27 @@ pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 230)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 235)
 pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 245)
 pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 255)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 260)
 pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 270)
 pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
