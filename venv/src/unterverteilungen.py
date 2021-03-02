@@ -48,21 +48,23 @@ data["ort_der_freischaltung"] = "Trafostation"
 
 # 2
 """
-data["vorhaengeschloss_schalter"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
+data["sperrelement"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
 data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
 data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
 """
 
-data["vorhaengeschloss_schalter"] = "ja"
+data["sperrelement"] = "ja"
 data["betriebsraum_tuer_verschlossen"] = "ja"
 data["schalten_verboten"] = "ja"
 
 # 3
 """
 data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
+data["usv"] = # to be filled
 """
 
 data["spannungspruefer"] = "3M Voltage Meter x559m"
+data["usv"] = "ja"
 
 # 4
 """
@@ -152,15 +154,15 @@ pdf.image("vorlage5-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 22)
-pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am')
+pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil')
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 27)
-pdf.cell(0, 0, 'Schalter eingehängt und abgeschlossen?')
+pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
 
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 33)
-pdf.cell(0, 0, data.get("vorhaengeschloss_schalter"))
+pdf.cell(0, 0, data.get("sperrelement"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 43)
@@ -193,8 +195,20 @@ pdf.set_xy(104, 89)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 99)
+pdf.set_xy(104, 94)
 pdf.cell(0, 0, data.get("spannungspruefer"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 104)
+pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z.B.')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 109)
+pdf.cell(0, 0, 'USV, PV, Notstromaggregat?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 114)
+pdf.cell(0, 0, data.get("usv"))
 
 # 4 Geerdet und kurzgeschlossen
 
