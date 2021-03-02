@@ -181,19 +181,19 @@ pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 170)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 175)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 185)
 pdf.cell(0, 0, 'Art der Abdeckung:')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 190)
 pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
