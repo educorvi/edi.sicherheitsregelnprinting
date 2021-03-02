@@ -78,11 +78,9 @@ data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
 # 5
 """
 data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
-data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
 """
 
 data["ziel_der_abdeckung"] = "Personenschutz"
-data["art_der_abdeckung"] = "isolierende Formteile"
 
 
 # Kopffragen
@@ -241,13 +239,5 @@ pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 175)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 185)
-pdf.cell(0, 0, 'Art der Abdeckung:')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 190)
-pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
 pdf.output("unterverteilungen.pdf", "F")
