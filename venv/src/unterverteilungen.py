@@ -10,6 +10,8 @@ pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
+
+# Kopffragen
 """
 data["arbeitsstelle"] = input.get('#/properties/arbeitsstelle-arbeitsort')
 data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
@@ -31,6 +33,7 @@ data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 data["abgrenzung_arbeitsbereich_ja"] = "x"
 data["abgrenzung_arbeitsbereich_nein"] = "x"
 
+# 1
 """
 # Verbindung zwischen ausloesestrom und art_der_freischaltung?
 # data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
@@ -43,6 +46,7 @@ data["art_der_freischaltung"] = "NH-Sicherungen"
 data["ausloesestrom"] = "50"
 data["ort_der_freischaltung"] = "Trafostation"
 
+# 2
 """
 data["vorhaengeschloss_schalter"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
 data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
@@ -52,6 +56,13 @@ data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d5800
 data["vorhaengeschloss_schalter"] = "ja"
 data["betriebsraum_tuer_verschlossen"] = "ja"
 data["schalten_verboten"] = "ja"
+
+# 3
+"""
+data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
+"""
+
+data["spannungspruefer"] = "3M Voltage Meter x559m"
 
 
 # Kopffragen
@@ -159,9 +170,13 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-"""
-to be filled
-"""
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 89)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 99)
+pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
