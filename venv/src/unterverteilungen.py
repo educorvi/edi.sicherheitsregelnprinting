@@ -7,7 +7,7 @@ pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
 pdf.add_font('DGUVMeta-Bold', '', 'DGUVMeta-Bold.ttf', uni=True)
 pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 
-pdf.image("vorlage1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 # Kopffragen
 
@@ -68,6 +68,11 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 61)
 pdf.cell(0, 0, 'Hauptverteilung %s ' % '55934')
+
+#Adding new page
+
+pdf.add_page()
+pdf.image("vorlage5-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
