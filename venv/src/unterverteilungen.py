@@ -43,6 +43,17 @@ data["art_der_freischaltung"] = "NH-Sicherungen"
 data["ausloesestrom"] = "50"
 data["ort_der_freischaltung"] = "Trafostation"
 
+"""
+data["vorhaengeschloss_schalter"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
+data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
+data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
+"""
+
+data["vorhaengeschloss_schalter"] = "ja"
+data["betriebsraum_tuer_verschlossen"] = "ja"
+data["schalten_verboten"] = "ja"
+
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -110,9 +121,41 @@ pdf.image("vorlage5-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
-"""
-to be filled
-"""
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 22)
+pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 27)
+pdf.cell(0, 0, 'Schalter eingehängt und abgeschlossen?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 33)
+pdf.cell(0, 0, data.get("vorhaengeschloss_schalter"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 43)
+pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 48)
+pdf.cell(0, 0, 'Betriebsraum verschlossen?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 53)
+pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 63)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 68)
+pdf.cell(0, 0, 'zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 73)
+pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
