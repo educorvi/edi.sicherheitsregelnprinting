@@ -45,14 +45,34 @@ data["ausloesestrom"] = "50"
 data["ort_der_freischaltung"] = "Trafostation"
 data["ort_nroderbezeichnung"] = "55934"
 
+"""
+data["vorhaengeschloss_schalter"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
+data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
+data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
+"""
+
 data["vorhaengeschloss_schalter"] = "ja"
 data["betriebsraum_tuer_verschlossen"] = "ja"
 data["schalten_verboten"] = "ja"
 
+"""
+data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
+"""
+
 data["spannungspruefer"] = "3M Voltage Meter x559m"
+
+"""
+data["euk_wo_eingebaut"] = input.get('#/properties/ediec7dc4dfa3b646818f003c01c9f1709c')
+data["geerdet_begruendung"] = input.get('#/properties/edibc2aa174fac14dc68fdce90b73990e62')
+"""
 
 data["euk_wo_eingebaut"] = "am richtigen Ort"
 data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
+
+"""
+data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
+data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
+"""
 
 data["ziel_der_abdeckung"] = "Personenschutz"
 data["art_der_abdeckung"] = "isolierende Formteile"
