@@ -159,23 +159,23 @@ pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 130)
 pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 135)
 pdf.cell(0, 0, 'eingebaut?')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 140)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 150)
 pdf.cell(0, 0, 'Begründung:')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 155)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
