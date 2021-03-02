@@ -1,4 +1,5 @@
 from fpdf import FPDF
+from .importdata import input
 
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
@@ -6,7 +7,8 @@ pdf.add_page()
 pdf.image("vorlage5-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
-data["arbeitsstelle"] = "educorvi GmbG & Co. KG"
+#data["arbeitsstelle"] = input.get('#/properties/arbeitsstelle-arbeitsort')
+data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
 data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
 data["person_anlageverantwortlichkeit"] = "Lars Walther"
 data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
