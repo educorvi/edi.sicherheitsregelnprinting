@@ -149,11 +149,11 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('Arial', '', 14)
+pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 89)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('Arial', 'u', 14)
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 99)
 pdf.cell(0, 0, data.get("spannungspruefer"))
 
