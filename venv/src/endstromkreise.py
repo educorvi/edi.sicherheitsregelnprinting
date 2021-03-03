@@ -53,6 +53,15 @@ data["sperrelement"] = "ja"
 data["betriebsraum_tuer_verschlossen"] = "ja"
 data["schalten_verboten"] = "ja"
 
+# 3
+"""
+data["spannungspruefer"] = input.get('#/properties/')
+data["usv"] = input.get('#/properties/')
+"""
+
+data["spannungspruefer"] = "3M Voltage Meter x559m"
+data["usv"] = "ja"
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -150,7 +159,25 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 89)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 94)
+pdf.cell(0, 0, data.get("spannungspruefer"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 104)
+pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z.B.')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 109)
+pdf.cell(0, 0, 'USV, PV, Notstromaggregat?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 114)
+pdf.cell(0, 0, data.get("usv"))
 
 # 4 Geerdet und kurzgeschlossen
 
