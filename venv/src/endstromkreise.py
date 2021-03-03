@@ -30,6 +30,19 @@ data["person_arbeitsausfuehrung"] = "Seppo Walther"
 data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 
+# 1
+"""
+# Verbindung zwischen ausloesestrom und art_der_freischaltung?
+# data["art_der_freischaltung"] = input.get('#/properties/edi4961450e44ba4d16aeb015a919e73f0a')
+# data["ausloesestrom"] = "50"
+data["ort_der_freischaltung"] = input.get('#/properties/edi2e32c9143f91464392d3ea5b72c1db89')
+# data["ort_nroderbezeichnung"] = "55934"
+"""
+
+data["art_der_freischaltung"] = "NH-Sicherungen"
+data["ausloesestrom"] = "50"
+data["ort_der_freischaltung"] = "Trafostation"
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -62,7 +75,25 @@ pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
 # 1 Freigeschaltet
 
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 230)
+pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 235)
+pdf.cell(0, 0, data.get("art_der_freischaltung"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 245)
+pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 255)
+pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 260)
+pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
 #Adding new page
 
