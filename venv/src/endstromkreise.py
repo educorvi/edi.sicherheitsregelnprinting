@@ -3,7 +3,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
-pdf.image("vorlage1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("vorlage7-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
 
@@ -88,6 +88,11 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 pdf.set_font('Arial', 'u', 14)
 pdf.set_xy(108, 61)
 pdf.cell(0, 0, 'Unterverteilung %s ' % '55934')
+
+#Adding new page
+
+pdf.add_page()
+pdf.image("vorlage7-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
