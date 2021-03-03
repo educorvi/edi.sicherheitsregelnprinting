@@ -20,7 +20,6 @@ data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
 # Multiple-Choice-Felder (?):
 # data["zusaetzliche_schutzausrüstung"] = input.get('#/properties/zusatzliche-personliche-schutzausrustung')
-# data["abgrenzung_arbeitsbereich"] = input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder')
 """
 
 data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
@@ -30,8 +29,6 @@ data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
 data["person_arbeitsausfuehrung"] = "Seppo Walther"
 data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
-data["abgrenzung_arbeitsbereich_ja"] = "x"
-data["abgrenzung_arbeitsbereich_nein"] = "x"
 
 # Kopffragen
 
@@ -62,14 +59,6 @@ pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(88.4, 175.6)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(14, 200.8)
-pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(37.2, 200.8)
-pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
 
