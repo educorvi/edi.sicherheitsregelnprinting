@@ -42,6 +42,17 @@ data["art_der_freischaltung"] = "LS-Schalter"
 data["ausloesestrom"] = "50"
 data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
 
+# 2
+"""
+data["sperrelement"] = input.get('#/properties/')
+data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/')
+data["schalten_verboten"] = input.get('#/properties/')
+"""
+
+data["sperrelement"] = "ja"
+data["betriebsraum_tuer_verschlossen"] = "ja"
+data["schalten_verboten"] = "ja"
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -101,7 +112,41 @@ pdf.image("vorlage7-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 22)
+pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil')
 
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 27)
+pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 33)
+pdf.cell(0, 0, data.get("sperrelement"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 43)
+pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 48)
+pdf.cell(0, 0, 'Betriebsraum verschlossen?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 53)
+pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 63)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 68)
+pdf.cell(0, 0, 'zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 73)
+pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
