@@ -3,6 +3,10 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
+pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
+pdf.add_font('DGUVMeta-Bold', '', 'DGUVMeta-Bold.ttf', uni=True)
+pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
+
 pdf.image("vorlage9-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
@@ -12,7 +16,7 @@ pdf.image("vorlage9-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 #Adding new page
 
 pdf.add_page()
-pdfimage("vorlage9-Seite2.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("vorlage9-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
