@@ -73,7 +73,7 @@ data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
 
 # 5
 """
-data["ziel_der_abdeckung"] = input.get('#/properties/edi94f9841893d04f6184e06a9b57797e59')
+data["ziel_der_abdeckung"] = input.get('#/properties/')
 """
 
 data["ziel_der_abdeckung"] = "Personenschutz"
