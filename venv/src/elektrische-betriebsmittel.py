@@ -9,6 +9,11 @@ pdf.image("vorlage9-Seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 
 
+#Adding new page
+
+pdf.add_page()
+pdfimage("vorlage9-Seite2.jpg", x=-4, y=-8, w=217, h=313)
+
 # 2 Gegen Wiedereinschalten gesichert
 
 
