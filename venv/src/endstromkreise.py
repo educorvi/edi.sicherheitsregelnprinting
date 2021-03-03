@@ -71,6 +71,13 @@ data["geerdet_begruendung"] = input.get('#/properties/')
 data["euk_wo_eingebaut"] = "an der Sammelschiene"
 data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
 
+# 5
+"""
+data["ziel_der_abdeckung"] = input.get('#/properties/edi94f9841893d04f6184e06a9b57797e59')
+"""
+
+data["ziel_der_abdeckung"] = "Personenschutz"
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -212,6 +219,12 @@ pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 170)
+pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 175)
+pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
 pdf.output("endstromkreise.pdf", "F")
