@@ -29,6 +29,43 @@ data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 data["abgrenzung_arbeitsbereich_ja"] = "x"
 data["abgrenzung_arbeitsbereich_nein"] = "x"
 
+# Kopffragen
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(12, 76)
+pdf.cell(0, 0, data.get("arbeitsstelle"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(12, 94)
+pdf.cell(0, 0, data.get("datum_uhrzeit"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(12, 112.5)
+pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(12, 131)
+pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(12, 149.5)
+pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(14.1, 175.6)
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(88.4, 175.6)
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(14, 200.8)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(37.2, 200.8)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
 
