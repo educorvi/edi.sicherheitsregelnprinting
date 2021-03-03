@@ -33,15 +33,14 @@ data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 # 1
 """
 # Verbindung zwischen ausloesestrom und art_der_freischaltung?
-# data["art_der_freischaltung"] = input.get('#/properties/edi4961450e44ba4d16aeb015a919e73f0a')
+# data["art_der_freischaltung"] = input.get('#/properties/')
 # data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = input.get('#/properties/edi2e32c9143f91464392d3ea5b72c1db89')
-# data["ort_nroderbezeichnung"] = "55934"
+data["ort_der_freischaltung"] = input.get('#/properties/')
 """
 
-data["art_der_freischaltung"] = "NH-Sicherungen"
+data["art_der_freischaltung"] = "LS-Schalter"
 data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = "Trafostation"
+data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
 
 # Kopffragen
 
