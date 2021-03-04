@@ -55,6 +55,12 @@ data["schaltsperre"] = "ja"
 data["reparaturschalter"] = "ja"
 data["schalten_verboten"] = "ja"
 
+# 3
+"""
+data["spannungspruefer"] = input.get('#/properties/')
+"""
+
+data["spannungspruefer"] = "3M Voltage Meter x559m"
 
 # Kopffragen
 
@@ -165,7 +171,13 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(104, 105)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
+pdf.set_font('DGUVMeta-Normal', 'u', 14)
+pdf.set_xy(104, 110)
+pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
