@@ -179,7 +179,7 @@ pdf.set_xy(12.7, 89)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(0,0,0
+pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 94)
 pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
 
