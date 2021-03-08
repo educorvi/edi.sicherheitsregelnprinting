@@ -88,7 +88,7 @@ data["art_der_abdeckung"] = "isolierende Formteile"
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(12, 76)
+pdf.set_xy(12, 101)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
