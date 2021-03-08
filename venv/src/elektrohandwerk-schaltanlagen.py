@@ -135,12 +135,14 @@ pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 29.2)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 235)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 34.2)
 pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 245)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 39.2)
 pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
@@ -148,12 +150,14 @@ pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 50)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 260)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 55)
 pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 270)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 60)
 pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 """
