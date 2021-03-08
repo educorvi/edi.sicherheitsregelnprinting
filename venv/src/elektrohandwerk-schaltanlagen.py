@@ -206,29 +206,28 @@ pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
 
-"""
-
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 130)
-pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 210)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 135)
-pdf.cell(0, 0, 'eingebaut?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 140)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 215)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 150)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 221.5)
 pdf.cell(0, 0, 'Begründung:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 155)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 226.5)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
+"""
 
 # 5 Mit der Abdeckung soll erreicht werden
 
