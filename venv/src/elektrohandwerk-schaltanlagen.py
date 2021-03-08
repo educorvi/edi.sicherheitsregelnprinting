@@ -169,7 +169,7 @@ pdf.set_xy(12.7, 77.5)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(35,31,32)
+pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 82.5)
 pdf.cell(0, 0, data.get("vorhaengeschloss_schalter"))
 
@@ -179,7 +179,7 @@ pdf.set_xy(12.7, 89)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(35,31,32)
+pdf.set_text_color(0,0,0
 pdf.set_xy(12.7, 94)
 pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
 
@@ -189,7 +189,7 @@ pdf.set_xy(12.7, 100.5)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(35,31,32)
+pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 105.5)
 pdf.cell(0, 0, data.get("schalten_verboten"))
 
@@ -202,7 +202,7 @@ pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(35,31,32)
+pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
 
@@ -214,7 +214,7 @@ pdf.set_xy(12.7, 210)
 pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(35,31,32)
+pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 215)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
@@ -224,7 +224,7 @@ pdf.set_xy(12.7, 221.5)
 pdf.cell(0, 0, 'Begründung:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
-pdf.set_text_color(35,31,32)
+pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 226.5)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
