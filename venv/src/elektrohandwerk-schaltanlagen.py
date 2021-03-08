@@ -97,7 +97,13 @@ pdf.set_text_color(0, 0, 0)
 pdf.set_xy(13, 101)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35, 31, 32)
+pdf.set_xy(13, 112)
+pdf.cell(0, 0, "Datum und Uhrzeit:")
+
 pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_text_color(0, 0, 0)
 pdf.set_xy(13, 120)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
