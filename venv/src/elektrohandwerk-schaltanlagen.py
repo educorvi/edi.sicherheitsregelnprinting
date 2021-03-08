@@ -143,8 +143,9 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 245)
 pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 255)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 50)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
