@@ -123,6 +123,8 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 225.5)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
+"""
+
 # 1 Freigeschaltet
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -149,10 +151,14 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 270)
 pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
+"""
+
 #Adding new page
 
 pdf.add_page()
 pdf.image("newtemplate_seite2_1.jpg", x=-4, y=-8, w=217, h=313)
+
+"""
 
 # 2 Gegen Wiedereinschalten gesichert
 
@@ -242,5 +248,6 @@ pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 190)
 pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
+"""
 
 pdf.output("elektrohandwerk-schaltanlagen.pdf", "F")
