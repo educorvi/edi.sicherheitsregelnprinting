@@ -8,7 +8,7 @@ pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
 pdf.add_font('DGUVMeta-Bold', '', 'DGUVMeta-Bold.ttf', uni=True)
 pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 
-pdf.image("newtemplate1_seite1_1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate1_seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
 
@@ -156,7 +156,7 @@ pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 #Adding new page
 
 pdf.add_page()
-pdf.image("newtemplate_seite2_1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 """
 
