@@ -222,44 +222,44 @@ pdf.cell(0, 0, data.get("spannungspruefer"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 210)
+pdf.set_xy(12.7, 189)
 pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 215)
+pdf.set_xy(12.7, 194)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 221.5)
+pdf.set_xy(12.7, 200.5)
 pdf.cell(0, 0, 'Begründung:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 226.5)
+pdf.set_xy(12.7, 205.5)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 257.6)
+pdf.set_xy(12.7, 236.6)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 262.6)
+pdf.set_xy(12.7, 241.6)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 269.1)
+pdf.set_xy(12.7, 248.1)
 pdf.cell(0, 0, 'Art der Abdeckung:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 274.1)
+pdf.set_xy(12.7, 253.1)
 pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
 pdf.output("elektrohandwerk-schaltanlagen.pdf", "F")
