@@ -84,11 +84,23 @@ data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3
 data["ziel_der_abdeckung"] = "Personenschutz"
 data["art_der_abdeckung"] = "isolierende Formteile"
 
+# Title
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 58.5)
+pdf.cell(0, 0, 'Arbeiten an Schaltanlagen in der Niederspannung')
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 68)
+pdf.cell(0, 0, '(unterspannungsseitig)')
 
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(13, 107)
+pdf.set_text_color(0,0,0)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
