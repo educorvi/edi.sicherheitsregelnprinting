@@ -88,39 +88,39 @@ data["art_der_abdeckung"] = "isolierende Formteile"
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(13, 101)
+pdf.set_xy(13, 107)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(13, 120)
+pdf.set_xy(13, 126)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(13, 139)
+pdf.set_xy(13, 145)
 pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(13, 158)
+pdf.set_xy(13, 164)
 pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(13, 177)
+pdf.set_xy(13, 183)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(14.3, 202)
+pdf.set_xy(14.3, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(72.2, 202)
+pdf.set_xy(72.2, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(14.4, 225.5)
+pdf.set_xy(14.4, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(72.2, 225.5)
+pdf.set_xy(72.2, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 #Adding new page
