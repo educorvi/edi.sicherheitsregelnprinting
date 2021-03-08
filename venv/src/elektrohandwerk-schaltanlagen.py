@@ -130,8 +130,9 @@ pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 230)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(104, 20)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
