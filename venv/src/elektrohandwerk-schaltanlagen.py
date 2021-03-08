@@ -123,7 +123,10 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 225.5)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
-"""
+#Adding new page
+
+pdf.add_page()
+pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
@@ -150,13 +153,6 @@ pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(104, 270)
 pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
-
-"""
-
-#Adding new page
-
-pdf.add_page()
-pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 """
 
