@@ -132,7 +132,7 @@ pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(104, 20)
+pdf.set_xy(12.7, 29.2)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
