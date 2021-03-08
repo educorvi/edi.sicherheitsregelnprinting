@@ -227,26 +227,27 @@ pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 226.5)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
-"""
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 170)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 257.6)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 175)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 262.6)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 185)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 269.1)
 pdf.cell(0, 0, 'Art der Abdeckung:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 190)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 274.1)
 pdf.cell(0, 0, data.get("art_der_abdeckung"))
-
-"""
 
 pdf.output("elektrohandwerk-schaltanlagen.pdf", "F")
