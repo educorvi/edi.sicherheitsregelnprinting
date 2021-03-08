@@ -193,17 +193,20 @@ pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 105.5)
 pdf.cell(0, 0, data.get("schalten_verboten"))
 
-"""
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 89)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 99)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
+
+"""
 
 # 4 Geerdet und kurzgeschlossen
 
