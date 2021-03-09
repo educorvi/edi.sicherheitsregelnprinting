@@ -42,17 +42,26 @@ else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
 # 1
-"""
-# Verbindung zwischen ausloesestrom und art_der_freischaltung?
-# data["art_der_freischaltung"] = input.get('#/properties/edi4961450e44ba4d16aeb015a919e73f0a')
-# data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = input.get('#/properties/edi2e32c9143f91464392d3ea5b72c1db89')
-# data["ort_nroderbezeichnung"] = "55934"
-"""
 
-data["art_der_freischaltung"] = "NH-Sicherungen"
-data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = "Trafostation"
+data["art_der_freischaltung"] = input.get('#/properties/edi4961450e44ba4d16aeb015a919e73f0a')
+
+if data["art_der_freischaltung"] == "NH-Sicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edibe2aabe1258d47b585d178a186601fc3')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
+    data["ausloesestrom"] = input.get('#/properties/edib93efcc9a763409c9d3e8357a8774554')
+elif data["art_der_freischaltung"] == "Schraubsicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edic980387b0bd741e2ac4a15e7e4b6cc2e')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi2e32c9143f91464392d3ea5b72c1db89')
+
+if data["ort_der_freischaltung"] == "Hauptverteilung":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi32c21570304b4f0d911d02b8a8046d0c')
+elif data["ort_der_freischaltung"] == "Unterverteilung":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi6ba4422c3dad4ea2a5ed921a02764123')
+else:
+    data["ort_nroderbezeichnung"] = "/"
 
 # 2
 """
@@ -156,25 +165,35 @@ pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 230)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 29.2)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 235)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 34.2)
 pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 245)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 39.2)
 pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 255)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 50)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 260)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 55)
 pdf.cell(0, 0, data.get("ort_der_freischaltung"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 60)
+pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
