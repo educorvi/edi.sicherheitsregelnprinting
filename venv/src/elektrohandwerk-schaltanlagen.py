@@ -52,7 +52,7 @@ else:
 #data["abgrenzung_arbeitsbereich_nein"] = "x"
 
 # 1
-# Verbindung zwischen ausloesestrom und art_der_freischaltung?
+
 data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
 
 if data["art_der_freischaltung"] == "NH-Sicherungen":
@@ -74,13 +74,6 @@ elif data["ort_der_freischaltung"] == "Kabelverteilerschrank":
     data["ort_nroderbezeichnung"] = input.get('#/properties/edidca06063234648e1b3b54c803a5b99ea')
 else:
     data["ort_nroderbezeichnung"] = "/"
-
-# data["ort_nroderbezeichnung"] = "55934"
-
-#data["art_der_freischaltung"] = "NH-Sicherungen"
-#data["ausloesestrom"] = "50"
-#data["ort_der_freischaltung"] = "Trafostation"
-#data["ort_nroderbezeichnung"] = "55934"
 
 # 2
 """
