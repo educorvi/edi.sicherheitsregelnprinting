@@ -70,13 +70,9 @@ data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi8aeb08270336
 data["schalten_verboten"] = input.get('#/properties/ediff3de7cc99c74d7a8d7fc9430714cc4d')
 
 # 3
-"""
+
 data["spannungspruefer"] = input.get('#/properties/edi9b0ea2910d514df791e528597a6e5f28')
 data["usv"] = input.get('#/properties/edi94283112763649bda0ef6f900ddc2cbc')
-"""
-
-data["spannungspruefer"] = "3M Voltage Meter x559m"
-data["usv"] = "ja"
 
 # 4
 """
@@ -192,62 +188,56 @@ pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 22)
-pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 77.5)
+pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil der Bereich für Laien zugänglich ist?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 27)
-pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 33)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 82.5)
 pdf.cell(0, 0, data.get("sperrelement"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 43)
-pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 89)
+pdf.cell(0, 0, 'Wurde die Tür zum elektrischen Betriebsraum verschlossen?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 48)
-pdf.cell(0, 0, 'Betriebsraum verschlossen?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 53)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 94)
 pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 63)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 100.5)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 68)
-pdf.cell(0, 0, 'zusätzlich angebracht?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 73)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 105.5)
 pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 89)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 94)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 104)
-pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z.B.')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 147.5)
+pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z. B. USV, PV, Notstromaggregat?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 109)
-pdf.cell(0, 0, 'USV, PV, Notstromaggregat?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 114)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 152.5)
 pdf.cell(0, 0, data.get("usv"))
 
 # 4 Geerdet und kurzgeschlossen
