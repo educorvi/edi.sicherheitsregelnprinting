@@ -95,6 +95,17 @@ elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
 else:
     data["art_der_abdeckung"] = ""
 
+# Title
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 58.5)
+pdf.cell(0, 0, 'Arbeiten an Unterverteilungen')
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 68)
+pdf.cell(0, 0, 'in der Niederspannung')
 
 # Kopffragen
 
