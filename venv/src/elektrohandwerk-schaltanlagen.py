@@ -90,16 +90,13 @@ else:
 data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
 
 if data["ziel_der_abdeckung"] == "ausreichender Berührungsschutz":
-    data["art_der_abdeckung"] = input.get('#/properties/edid11961ed04714161961a663f2e9cae09')
-
+    data["art_der_abdeckung"] = ''.join(input.get('#/properties/edid11961ed04714161961a663f2e9cae09'))
 elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
-    data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
-
+    data["art_der_abdeckung"] = ''.join(input.get('#/properties/edibe53684aba79423cb430632c3423e180'))
 elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
     data["art_der_abdeckung"] = input.get('#/properties/edi30fb04c107ff4509bdddd00f9ab97add') #keine Abdeckung angebracht weil
-
-#data["ziel_der_abdeckung"] = "Personenschutz"
-data["art_der_abdeckung"] = "isolierende Formteile"
+else:
+    data["art_der_abdeckung"] = ""
 
 # Title
 
@@ -272,7 +269,10 @@ pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 248.1)
-pdf.cell(0, 0, 'Art der Abdeckung:')
+if data["ziel_der_abdeckung"] != "Abdeckung nicht notwendig":
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+else:
+    pdf.cell(0, 0, 'keine Abdeckung angebracht, weil:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
