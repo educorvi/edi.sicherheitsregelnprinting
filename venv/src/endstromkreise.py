@@ -196,24 +196,24 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 89)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 94)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 104)
-pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z.B.')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 147.5)
+pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z. B. USV, PV, Notstromaggregat?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 109)
-pdf.cell(0, 0, 'USV, PV, Notstromaggregat?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 114)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 152.5)
 pdf.cell(0, 0, data.get("usv"))
 
 # 4 Geerdet und kurzgeschlossen
