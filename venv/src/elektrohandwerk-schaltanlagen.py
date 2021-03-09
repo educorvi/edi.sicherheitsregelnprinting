@@ -75,21 +75,22 @@ data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d5800
 data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
 
 # 4
-"""
-data["euk_wo_eingebaut"] = input.get('#/properties/ediec7dc4dfa3b646818f003c01c9f1709c')
-data["geerdet_begruendung"] = input.get('#/properties/edibc2aa174fac14dc68fdce90b73990e62')
-"""
 
-data["euk_wo_eingebaut"] = "am richtigen Ort"
-data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
+data["euk_wo_eingebaut"] = input.get('#/properties/ediec7dc4dfa3b646818f003c01c9f1709c')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edibc2aa174fac14dc68fdce90b73990e62')
+else:
+    data["geerdet_begruendung"] = ""
+
+#data["euk_wo_eingebaut"] = "am richtigen Ort"
+#data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
 
 # 5
-"""
-data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
-data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
-"""
 
-data["ziel_der_abdeckung"] = "Personenschutz"
+data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
+#data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
+
+#data["ziel_der_abdeckung"] = "Personenschutz"
 data["art_der_abdeckung"] = "isolierende Formteile"
 
 # Title
