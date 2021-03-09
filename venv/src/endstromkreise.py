@@ -62,13 +62,13 @@ data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
 
 # 2
 """
-data["sperrelement"] = input.get('#/properties/')
-data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/')
-data["schalten_verboten"] = input.get('#/properties/')
+data["sperrelement"] = input.get('#/properties/edi21ce1be420ec46bab9c030d670cd417f')
+data["schaltsperre"] = input.get('#/properties/edid27d8666a87a455c96e03b46bc81ed17')
+data["schalten_verboten"] = input.get('#/properties/edifef867c48d994dd7a9bead41c0a9dc1d')
 """
 
 data["sperrelement"] = "ja"
-data["betriebsraum_tuer_verschlossen"] = "ja"
+data["schaltsperre"] = "ja"
 data["schalten_verboten"] = "ja"
 
 # 3
@@ -164,41 +164,36 @@ pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 22)
-pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 77.5)
+pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil der Bereich für Laien zugänglich ist?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 27)
-pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 33)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 82.5)
 pdf.cell(0, 0, data.get("sperrelement"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 43)
-pdf.cell(0, 0, 'Wurde die Tür zum elektrischen')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 89)
+pdf.cell(0, 0, 'Wurde eine Schaltsperre eingesetzt, weil der Bereich für Laien zugänglich ist?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 48)
-pdf.cell(0, 0, 'Betriebsraum verschlossen?')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 94)
+pdf.cell(0, 0, data.get("schaltsperre"))
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 53)
-pdf.cell(0, 0, data.get("betriebsraum_tuer_verschlossen"))
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 100.5)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 63)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 68)
-pdf.cell(0, 0, 'zusätzlich angebracht?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 73)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 105.5)
 pdf.cell(0, 0, data.get("schalten_verboten"))
+
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
