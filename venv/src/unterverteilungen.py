@@ -64,15 +64,10 @@ else:
     data["ort_nroderbezeichnung"] = "/"
 
 # 2
-"""
+
 data["sperrelement"] = input.get('#/properties/edi36e713d0f0544afab38414b8d139fcec')
 data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi8aeb082703364653b77ecedfb294800c')
 data["schalten_verboten"] = input.get('#/properties/ediff3de7cc99c74d7a8d7fc9430714cc4d')
-"""
-
-data["sperrelement"] = "ja"
-data["betriebsraum_tuer_verschlossen"] = "ja"
-data["schalten_verboten"] = "ja"
 
 # 3
 """
