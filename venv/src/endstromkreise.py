@@ -18,8 +18,16 @@ data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
 data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen)
 data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
-# Multiple-Choice-Felder (?):
-# data["zusaetzliche_schutzausrüstung"] = input.get('#/properties/zusatzliche-personliche-schutzausrustung')
+
+if 'gegen elektrischen Schlag' in input.get('#/properties/zusatzliche-personliche-schutzausrustung-bei-der-1'):
+    data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
+else:
+    data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = ""
+
+if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-schutzausrustung-bei-der-1'):
+    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
+else:
+    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 """
 
 data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
