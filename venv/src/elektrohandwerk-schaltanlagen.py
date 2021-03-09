@@ -70,10 +70,6 @@ data["vorhaengeschloss_schalter"] = input.get('#/properties/edic589597967b44e00a
 data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
 data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
 
-#data["vorhaengeschloss_schalter"] = "ja"
-#data["betriebsraum_tuer_verschlossen"] = "ja"
-#data["schalten_verboten"] = "ja"
-
 # 3
 """
 data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
