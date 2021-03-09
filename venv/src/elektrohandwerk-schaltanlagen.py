@@ -88,7 +88,15 @@ else:
 # 5
 
 data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
-#data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
+
+if data["ziel_der_abdeckung"] == "ausreichender Berührungsschutz":
+    data["art_der_abdeckung"] = input.get('#/properties/edid11961ed04714161961a663f2e9cae09')
+
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = input.get('#/properties/edibe53684aba79423cb430632c3423e180')
+
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edi30fb04c107ff4509bdddd00f9ab97add') #keine Abdeckung angebracht weil
 
 #data["ziel_der_abdeckung"] = "Personenschutz"
 data["art_der_abdeckung"] = "isolierende Formteile"
