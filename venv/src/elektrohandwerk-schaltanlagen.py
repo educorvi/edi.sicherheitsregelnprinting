@@ -54,13 +54,22 @@ else:
 # 1
 # Verbindung zwischen ausloesestrom und art_der_freischaltung?
 data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
-# data["ausloesestrom"] = "50"
-#data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+
+if data["art_der_freischaltung"] == "NH-Sicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edi812abac1f12d44d18d4415cb1ddb1984')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
+    data["ausloesestrom"] = input.get('#/properties/edib290d1801a964d8ab3e277a056cd793c')
+elif data["art_der_freischaltung"] == "Leistungsschalter":
+    data["ausloesestrom"] = input.get('#/properties/edi2b6d1b411a05466e8e3ce4def7b3879c')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
 # data["ort_nroderbezeichnung"] = "55934"
 
 #data["art_der_freischaltung"] = "NH-Sicherungen"
-data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = "Trafostation"
+#data["ausloesestrom"] = "50"
+#data["ort_der_freischaltung"] = "Trafostation"
 data["ort_nroderbezeichnung"] = "55934"
 
 # 2
