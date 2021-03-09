@@ -89,10 +89,22 @@ data["euk_wo_eingebaut"] = "an der Sammelschiene"
 
 # 5
 """
-data["ziel_der_abdeckung"] = input.get('#/properties/')
+data["ziel_der_abdeckung"] = input.get('#/properties/edi5cac8aded5f245d4964d289ba11c3d9d')
 """
 
 data["ziel_der_abdeckung"] = "Personenschutz"
+
+# Title
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 58.5)
+pdf.cell(0, 0, 'Arbeiten an')
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 68)
+pdf.cell(0, 0, 'Endstromkreisen')
 
 # Kopffragen
 
@@ -216,26 +228,26 @@ pdf.cell(0, 0, data.get("usv"))
 
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 130)
-pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 189)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 135)
-pdf.cell(0, 0, 'eingebaut?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 140)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 194)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 170)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 236.6)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 175)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 241.6)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
 pdf.output("endstromkreise.pdf", "F")
