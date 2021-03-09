@@ -244,10 +244,11 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 194)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
-pdf.set_font('DGUVMeta-Bold', '', 10)
-pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 200.5)
-pdf.cell(0, 0, 'Begründung:')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35,31,32)
+    pdf.set_xy(12.7, 200.5)
+    pdf.cell(0, 0, 'Begründung:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
