@@ -92,7 +92,7 @@ if data["ziel_der_abdeckung"] == "ausreichender Berührungsschutz":
 elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
     data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edibe53684aba79423cb430632c3423e180'))
 elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
-    data["art_der_abdeckung"] = input.get('#/properties/edi30fb04c107ff4509bdddd00f9ab97add') #keine Abdeckung angebracht weil
+    data["art_der_abdeckung"] = input.get('#/properties/edi30fb04c107ff4509bdddd00f9ab97add')
 else:
     data["art_der_abdeckung"] = ""
 
