@@ -20,6 +20,7 @@ data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
 data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen')
 data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
+
 if 'gegen elektrischen Schlag' in input.get('#/properties/zusatzliche-personliche-schutzausrustung'):
     data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 else:
