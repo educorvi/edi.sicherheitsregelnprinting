@@ -241,24 +241,25 @@ pdf.cell(0, 0, data.get("usv"))
 
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 130)
-pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 189)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 135)
-pdf.cell(0, 0, 'eingebaut?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 140)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 194)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 150)
-pdf.cell(0, 0, 'Begründung:')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35,31,32)
+    pdf.set_xy(12.7, 200.5)
+    pdf.cell(0, 0, 'Begründung:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 155)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 205.5)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
