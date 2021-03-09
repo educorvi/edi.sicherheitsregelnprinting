@@ -65,15 +65,14 @@ else:
     data["ort_nroderbezeichnung"] = "/"
 
 # 2
-"""
+
 data["vorhaengeschloss_schalter"] = input.get('#/properties/edic589597967b44e00af9e74c7c1319cb0')
 data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff504d6eb8fd735f12fd7d17')
 data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
-"""
 
-data["vorhaengeschloss_schalter"] = "ja"
-data["betriebsraum_tuer_verschlossen"] = "ja"
-data["schalten_verboten"] = "ja"
+#data["vorhaengeschloss_schalter"] = "ja"
+#data["betriebsraum_tuer_verschlossen"] = "ja"
+#data["schalten_verboten"] = "ja"
 
 # 3
 """
