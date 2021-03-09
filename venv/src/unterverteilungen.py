@@ -1,3 +1,6 @@
+#to be added bei ja/nein-frage
+#Stehen andere Anlagenteile weiterhin unter Spannung, so dass der Arbeitsbereich z. B. mit Ketten oder Bändern gekennzeichnet oder abgegrenzt werden muss?
+
 from fpdf import FPDF
 from importdata import input
 
@@ -108,9 +111,6 @@ pdf.set_xy(12.7, 68)
 pdf.cell(0, 0, 'in der Niederspannung')
 
 # Kopffragen
-
-#to be added bei ja/nein-frage
-#Stehen andere Anlagenteile weiterhin unter Spannung, so dass der Arbeitsbereich z. B. mit Ketten oder Bändern gekennzeichnet oder abgegrenzt werden muss?
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(13, 107)
