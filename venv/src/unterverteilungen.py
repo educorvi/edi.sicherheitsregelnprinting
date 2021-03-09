@@ -21,15 +21,15 @@ data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-
 data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
 
-if 'gegen elektrischen Schlag' in input.get('#/properties/zusatzliche-personliche-schutzausrustung'):
+if 'gegen elektrischen Schlag' in input.get('#/properties/zusatzliche-personliche-schutzausrustung-bei-der-1'):
     data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 else:
     data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = ""
 
-if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-schutzausrustung'):
+if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-schutzausrustung-bei-der-1'):
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 else:
-    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
+    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 
 if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "ja":
     data["abgrenzung_arbeitsbereich_ja"] = "x"
@@ -94,39 +94,56 @@ data["ziel_der_abdeckung"] = "Personenschutz"
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(12, 76)
+pdf.set_xy(13, 107)
+pdf.set_text_color(0,0,0)
 pdf.cell(0, 0, data.get("arbeitsstelle"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(12, 94)
+pdf.set_xy(13, 126)
 pdf.cell(0, 0, data.get("datum_uhrzeit"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(12, 112.5)
+pdf.set_xy(13, 145)
 pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(12, 131)
+pdf.set_xy(13, 164)
 pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(12, 149.5)
+pdf.set_xy(13, 183)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 208.5)
+pdf.cell(0, 0, "gegen elektrischen Schlag")
+
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(14.1, 175.6)
+pdf.set_xy(14.3, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 208.5)
+pdf.cell(0, 0, "gegen Störlichbogen")
+
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(88.4, 175.6)
+pdf.set_xy(72.2, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(14, 200.8)
-pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 232)
+pdf.cell(0, 0, "ja")
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(37.2, 200.8)
+pdf.set_xy(14.4, 231.6)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 232)
+pdf.cell(0, 0, "nein")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(72.2, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet

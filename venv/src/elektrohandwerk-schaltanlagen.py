@@ -29,7 +29,7 @@ else:
 if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-schutzausrustung'):
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 else:
-    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
+    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 
 if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "ja":
     data["abgrenzung_arbeitsbereich_ja"] = "x"
