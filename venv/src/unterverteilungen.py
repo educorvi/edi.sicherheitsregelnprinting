@@ -75,13 +75,12 @@ data["spannungspruefer"] = input.get('#/properties/edi9b0ea2910d514df791e528597a
 data["usv"] = input.get('#/properties/edi94283112763649bda0ef6f900ddc2cbc')
 
 # 4
-"""
-data["euk_wo_eingebaut"] = input.get('#/properties/edibba761f4767d4a3b9f1528712f8f1abe')
-data["geerdet_begruendung"] = input.get('#/properties/edibba761f4767d4a3b9f1528712f8f1abe')
-"""
 
-data["euk_wo_eingebaut"] = "am richtigen Ort"
-data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
+data["euk_wo_eingebaut"] = input.get('#/properties/edibba761f4767d4a3b9f1528712f8f1abe')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edi1941312f7bf04fa5996ec5eb018f4c78')
+else:
+    data["geerdet_begruendung"] = ""
 
 # 5
 """
