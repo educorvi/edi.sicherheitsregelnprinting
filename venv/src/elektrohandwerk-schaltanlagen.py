@@ -20,7 +20,6 @@ data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
 data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen')
 data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
-# Multiple-Choice-Felder (?):
 if 'gegen elektrischen Schlag' in input.get('#/properties/zusatzliche-personliche-schutzausrustung'):
     data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 else:
@@ -31,8 +30,15 @@ if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-sc
 else:
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 
+if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "ja":
+    data["abgrenzung_arbeitsbereich_ja"] = "x"
+else:
+    data["abgrenzung_arbeitsbereich_ja"] = ""
 
-# data["abgrenzung_arbeitsbereich"] = input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder')
+if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "nein":
+    data["abgrenzung_arbeitsbereich_nein"] = "x"
+else:
+    data["abgrenzung_arbeitsbereich_nein"] = ""
 
 
 #data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
@@ -42,19 +48,17 @@ else:
 #data["person_arbeitsausfuehrung"] = "Seppo Walther"
 #data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
 #data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
-data["abgrenzung_arbeitsbereich_ja"] = "x"
-data["abgrenzung_arbeitsbereich_nein"] = "x"
+#data["abgrenzung_arbeitsbereich_ja"] = "x"
+#data["abgrenzung_arbeitsbereich_nein"] = "x"
 
 # 1
-"""
 # Verbindung zwischen ausloesestrom und art_der_freischaltung?
-# data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
 # data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+#data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
 # data["ort_nroderbezeichnung"] = "55934"
-"""
 
-data["art_der_freischaltung"] = "NH-Sicherungen"
+#data["art_der_freischaltung"] = "NH-Sicherungen"
 data["ausloesestrom"] = "50"
 data["ort_der_freischaltung"] = "Trafostation"
 data["ort_nroderbezeichnung"] = "55934"
