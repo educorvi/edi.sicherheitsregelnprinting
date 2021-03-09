@@ -87,9 +87,9 @@ else:
 data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
 
 if data["ziel_der_abdeckung"] == "ausreichender Berührungsschutz":
-    data["art_der_abdeckung"] = ''.join(input.get('#/properties/edid11961ed04714161961a663f2e9cae09'))
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edid11961ed04714161961a663f2e9cae09'))
 elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
-    data["art_der_abdeckung"] = ''.join(input.get('#/properties/edibe53684aba79423cb430632c3423e180'))
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edibe53684aba79423cb430632c3423e180'))
 elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
     data["art_der_abdeckung"] = input.get('#/properties/edi30fb04c107ff4509bdddd00f9ab97add') #keine Abdeckung angebracht weil
 else:
@@ -130,17 +130,33 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(13, 183)
 pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
 
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 208.5)
+pdf.cell(0, 0, "gegen elektrischen Schlag")
+
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(14.3, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 208.5)
+pdf.cell(0, 0, "gegen Störlichbogen")
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 232)
+pdf.cell(0, 0, "ja")
+
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(14.4, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 232)
+pdf.cell(0, 0, "nein")
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 231.6)
