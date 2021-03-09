@@ -11,20 +11,22 @@ pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 pdf.image("newtemplate1_seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
+input = input.get("data")
 
 #Kopffragen
-"""
+
+import pdb; pdb.set_trace()
 data["arbeitsstelle"] = input.get('#/properties/arbeitsstelle-arbeitsort')
-data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
-data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen)
-data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
-data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
+#data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
+#data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen)
+#data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
+#data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
 # Multiple-Choice-Felder (?):
 # data["zusaetzliche_schutzausrüstung"] = input.get('#/properties/zusatzliche-personliche-schutzausrustung')
 # data["abgrenzung_arbeitsbereich"] = input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder')
-"""
 
-data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
+
+#data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
 data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
 data["person_anlageverantwortlichkeit"] = "Lars Walther"
 data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
