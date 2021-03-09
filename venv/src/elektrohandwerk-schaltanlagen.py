@@ -64,13 +64,23 @@ elif data["art_der_freischaltung"] == "Leistungsschalter":
 else:
     data["ausloesestrom"] = "/"
 
-data["ort_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
+data["ort_der_freischaltung"] = input.get('#/properties/edi7bd23a69de5141aaa4379b4ba2b979ba')
+
+if data["ort_der_freischaltung"] == "Trafostation":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi3dc9a71b7dc547d6a55d036bd2417578')
+elif data["ort_der_freischaltung"] == "Umspannwerk/-anlage":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi69d788c9284e4a20b54819018aa0f5c4')
+elif data["ort_der_freischaltung"] == "Kabelverteilerschrank":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edidca06063234648e1b3b54c803a5b99ea')
+else:
+    data["ort_nroderbezeichnung"] = "/"
+
 # data["ort_nroderbezeichnung"] = "55934"
 
 #data["art_der_freischaltung"] = "NH-Sicherungen"
 #data["ausloesestrom"] = "50"
 #data["ort_der_freischaltung"] = "Trafostation"
-data["ort_nroderbezeichnung"] = "55934"
+#data["ort_nroderbezeichnung"] = "55934"
 
 # 2
 """
