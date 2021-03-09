@@ -42,10 +42,18 @@ data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 
 # 1
 """
-# Verbindung zwischen ausloesestrom und art_der_freischaltung?
-# data["art_der_freischaltung"] = input.get('#/properties/')
-# data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = input.get('#/properties/')
+# data["art_der_freischaltung"] = input.get('#/properties/edi4ed9533af063465dbd40ede7ce144b34')
+
+if data["art_der_freischaltung"] == "LS-Schalter":
+    data["ausloesestrom"] = input.get('#/properties/edi595058c14f914f97913f1982c3ee63ed')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
+    data["ausloesestrom"] = input.get('#/properties/edi866e423a5ffe4c8d8c634335fa41d500')
+elif data["art_der_freischaltung"] == "Schraubsicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edidd592cc4a5674acfa8669da7e7056728')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi86c60abee95a45c8886de483c2b84e91')
 """
 
 data["art_der_freischaltung"] = "LS-Schalter"
@@ -119,33 +127,40 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(14.3, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
 
-
-# 1 Freigeschaltet
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 230)
-pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 235)
-pdf.cell(0, 0, data.get("art_der_freischaltung"))
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 208.5)
+pdf.cell(0, 0, "gegen Störlichbogen")
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 245)
-pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 255)
-pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 260)
-pdf.cell(0, 0, data.get("ort_der_freischaltung"))
+pdf.set_xy(72.2, 208.3)
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
 #Adding new page
 
 pdf.add_page()
-pdf.image("vorlage7-Seite2.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
+
+# 1 Freigeschaltet
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 29.2)
+pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 34.2)
+pdf.cell(0, 0, data.get("art_der_freischaltung"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 40.7)
+pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 45.7)
+pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
