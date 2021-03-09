@@ -31,12 +31,12 @@ if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-sc
 else:
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 
-if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "ja":
+if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "ja":
     data["abgrenzung_arbeitsbereich_ja"] = "x"
 else:
     data["abgrenzung_arbeitsbereich_ja"] = ""
 
-if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "nein":
+if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein":
     data["abgrenzung_arbeitsbereich_nein"] = "x"
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
@@ -92,6 +92,9 @@ data["ziel_der_abdeckung"] = "Personenschutz"
 
 
 # Kopffragen
+
+#to be added bei ja/nein-frage
+#Stehen andere Anlagenteile weiterhin unter Spannung, so dass der Arbeitsbereich z. B. mit Ketten oder Bändern gekennzeichnet oder abgegrenzt werden muss?
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(13, 107)
