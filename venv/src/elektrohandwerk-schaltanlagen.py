@@ -82,9 +82,6 @@ if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
 else:
     data["geerdet_begruendung"] = ""
 
-#data["euk_wo_eingebaut"] = "am richtigen Ort"
-#data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
-
 # 5
 
 data["ziel_der_abdeckung"] = input.get('#/properties/edi8eb283983de7413b9b8b9530fb227543')
