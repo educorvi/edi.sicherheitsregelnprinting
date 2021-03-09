@@ -40,17 +40,6 @@ if input.get('#/properties/wurde-der-arbeitsbereich-z-b-mit-ketten-oder') == "ne
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
-
-#data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
-#data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
-#data["person_anlageverantwortlichkeit"] = "Lars Walther"
-#data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
-#data["person_arbeitsausfuehrung"] = "Seppo Walther"
-#data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
-#data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
-#data["abgrenzung_arbeitsbereich_ja"] = "x"
-#data["abgrenzung_arbeitsbereich_nein"] = "x"
-
 # 1
 
 data["art_der_freischaltung"] = input.get('#/properties/edi43ba285a6396493da82241d5ecec090d')
