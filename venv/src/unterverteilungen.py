@@ -83,11 +83,17 @@ else:
     data["geerdet_begruendung"] = ""
 
 # 5
-"""
-data["ziel_der_abdeckung"] = input.get('#/properties/edi94f9841893d04f6184e06a9b57797e59')
-"""
 
-data["ziel_der_abdeckung"] = "Personenschutz"
+data["ziel_der_abdeckung"] = input.get('#/properties/edi94f9841893d04f6184e06a9b57797e59')
+
+if data["ziel_der_abdeckung"] == "ausreichender Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edib6c44b7e15b043ec9dff1538ffc40229'))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edifc9c22900aa44e15b334d724a0c3eed6'))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edi66bace84743b4078b2aa9941828b96d6')
+else:
+    data["art_der_abdeckung"] = ""
 
 
 # Kopffragen
@@ -264,12 +270,27 @@ pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 170)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 236.6)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 175)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 241.6)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 248.1)
+if data["ziel_der_abdeckung"] != "Abdeckung nicht notwendig":
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+else:
+    pdf.cell(0, 0, 'keine Abdeckung angebracht, weil:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 253.1)
+pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
 pdf.output("unterverteilungen.pdf", "F")
