@@ -82,7 +82,7 @@ data["usv"] = "ja"
 
 # 4
 """
-data["euk_wo_eingebaut"] = input.get('#/properties/')
+data["euk_wo_eingebaut"] = input.get('#/properties/edib56dfa856ce84e9a92d61f2920c53f98')
 """
 
 data["euk_wo_eingebaut"] = "an der Sammelschiene"
