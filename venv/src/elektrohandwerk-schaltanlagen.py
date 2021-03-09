@@ -71,11 +71,8 @@ data["betriebsraum_tuer_verschlossen"] = input.get('#/properties/edi64719875ff50
 data["schalten_verboten"] = input.get('#/properties/edi6af7fbabb2a44046b882d580080326e1')
 
 # 3
-"""
-data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
-"""
 
-data["spannungspruefer"] = "3M Voltage Meter x559m"
+data["spannungspruefer"] = input.get('#/properties/edi594b8869f8884cb4b76d376d960c3b74')
 
 # 4
 """
