@@ -40,16 +40,23 @@ else:
 #data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 
 # 1
-"""
-# Verbindung zwischen ausloesestrom und art_der_freischaltung?
-# data["art_der_freischaltung"] = input.get('#/properties/')
-# data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = input.get('#/properties/')
-"""
 
-data["art_der_freischaltung"] = "LS-Schalter"
-data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
+data["art_der_freischaltung"] = input.get('#/properties/edi151f290f01614c52ba070de4f768e1f9')
+
+if data["art_der_freischaltung"] == "LS-Schalter":
+    data["ausloesestrom"] = input.get('#/properties/edi6a3941bb2cb141c4a16da7f789e8b592')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
+    data["ausloesestrom"] = input.get('#/properties/edi42d201e511d244929df7a7a4f87c01a0')
+elif data["art_der_freischaltung"] == "Schraubsicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edi3ad9b1c2693846999813e01fb7b491fa')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi17b019e086414ea48e6be09cb1fd27a1')
+
+#data["art_der_freischaltung"] = "LS-Schalter"
+#data["ausloesestrom"] = "50"
+#data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
 
 # 2
 """
