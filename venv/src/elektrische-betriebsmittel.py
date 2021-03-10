@@ -1,4 +1,5 @@
 from fpdf import FPDF
+from importdata import input
 
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
@@ -7,28 +8,36 @@ pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
 pdf.add_font('DGUVMeta-Bold', '', 'DGUVMeta-Bold.ttf', uni=True)
 pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 
-pdf.image("vorlage9-Seite1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate1_seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
+input = input.get("data")
 
 # Kopffragen
-"""
+
 data["arbeitsstelle"] = input.get('#/properties/arbeitsstelle-arbeitsort')
 data["datum_uhrzeit"] = input.get('#/properties/datum-und-uhrzeit')
-data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen)
+data["person_anlageverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-anlagenverantwortlichen')
 data["person_arbeitsverantwortlichkeit"] = input.get('#/properties/person-in-der-rolle-des-arbeitsverantwortlichen')
 data["person_arbeitsausfuehrung"] = input.get('#/properties/arbeitsausfuhrende-person')
-# Multiple-Choice-Felder (?):
-# data["zusaetzliche_schutzausrüstung"] = input.get('#/properties/zusatzliche-personliche-schutzausrustung')
-"""
 
-data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
-data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
-data["person_anlageverantwortlichkeit"] = "Lars Walther"
-data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
-data["person_arbeitsausfuehrung"] = "Seppo Walther"
-data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
-data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
+if 'gegen elektrischen Schlag' in input.get('#/properties/zusatzliche-personliche-schutzausrustung-bei-der-1'):
+    data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
+else:
+    data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = ""
+
+if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-schutzausrustung-bei-der-1'):
+    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
+else:
+    data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
+
+#data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
+#data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
+#data["person_anlageverantwortlichkeit"] = "Lars Walther"
+#data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
+#data["person_arbeitsausfuehrung"] = "Seppo Walther"
+#data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
+#data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
 
 # 1
 """
