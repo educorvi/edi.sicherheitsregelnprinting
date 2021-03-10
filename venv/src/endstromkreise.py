@@ -49,15 +49,10 @@ else:
 data["ort_der_freischaltung"] = input.get('#/properties/edi86c60abee95a45c8886de483c2b84e91')
 
 # 2
-"""
+
 data["sperrelement"] = input.get('#/properties/edi21ce1be420ec46bab9c030d670cd417f')
 data["schaltsperre"] = input.get('#/properties/edid27d8666a87a455c96e03b46bc81ed17')
 data["schalten_verboten"] = input.get('#/properties/edifef867c48d994dd7a9bead41c0a9dc1d')
-"""
-
-data["sperrelement"] = "ja"
-data["schaltsperre"] = "ja"
-data["schalten_verboten"] = "ja"
 
 # 3
 """
