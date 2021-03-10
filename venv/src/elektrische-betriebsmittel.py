@@ -53,11 +53,6 @@ data["schaltsperre"] = input.get('#/properties/edi70573b75d5564f3c8f8fdbc18587f7
 data["reparaturschalter"] = input.get('#/properties/edi6d1af6f810f640d981df099510d1ce34')
 data["schalten_verboten"] = input.get('#/properties/edi028811b628af49e880cffa21a1fc62bb')
 
-#data["sperrelement"] = "ja"
-#data["schaltsperre"] = "ja"
-#data["reparaturschalter"] = "ja"
-#data["schalten_verboten"] = "ja"
-
 # 3
 """
 data["spannungspruefer"] = input.get('#/properties/')
