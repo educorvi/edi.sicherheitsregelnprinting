@@ -47,17 +47,16 @@ else:
 data["ort_der_freischaltung"] = input.get('#/properties/edi17b019e086414ea48e6be09cb1fd27a1')
 
 # 2
-"""
-data["sperrelement"] = input.get('#/properties/')
-data["schaltsperre"] = input.get('#/properties/')
-data["reparaturschalter"] = input.get('#/properties/')
-data["schalten_verboten"] = input.get('#/properties/')
-"""
 
-data["sperrelement"] = "ja"
-data["schaltsperre"] = "ja"
-data["reparaturschalter"] = "ja"
-data["schalten_verboten"] = "ja"
+data["sperrelement"] = input.get('#/properties/edi776a057f1ac34a029366024d194d1f78')
+data["schaltsperre"] = input.get('#/properties/edi70573b75d5564f3c8f8fdbc18587f789')
+data["reparaturschalter"] = input.get('#/properties/edi6d1af6f810f640d981df099510d1ce34')
+data["schalten_verboten"] = input.get('#/properties/edi028811b628af49e880cffa21a1fc62bb')
+
+#data["sperrelement"] = "ja"
+#data["schaltsperre"] = "ja"
+#data["reparaturschalter"] = "ja"
+#data["schalten_verboten"] = "ja"
 
 # 3
 """
@@ -150,52 +149,34 @@ pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 22)
-pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 77.5)
+pdf.cell(0, 0, 'Wurde ein Sperrelement eingesetzt, weil der Bereich für Laien zugänglich ist?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 27)
-pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 33)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 82.5)
 pdf.cell(0, 0, data.get("sperrelement"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 43)
-pdf.cell(0, 0, 'Wurde eine Schaltsperre eingesetzt, weil')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 89)
+pdf.cell(0, 0, 'Wurde eine Schaltsperre eingesetzt, weil der Bereich für Laien zugänglich ist?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 48)
-pdf.cell(0, 0, 'der Bereich fuer Laien zugaenglich ist?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 53)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 94)
 pdf.cell(0, 0, data.get("schaltsperre"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 63)
-pdf.cell(0, 0, 'Wurde ein Reparaturschalter mit einem')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 100.5)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 68)
-pdf.cell(0, 0, 'Vorhaengeschloss versehen?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 73)
-pdf.cell(0, 0, data.get("reparaturschalter"))
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 83)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
-
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 88)
-pdf.cell(0, 0, 'zusätzlich angebracht?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 93)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 105.5)
 pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
