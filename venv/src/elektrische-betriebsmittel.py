@@ -31,14 +31,6 @@ if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-sc
 else:
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 
-#data["arbeitsstelle"] = "educorvi GmbH & Co. KG"
-#data["datum_uhrzeit"] = "01.03.2021 11:57 Uhr"
-#data["person_anlageverantwortlichkeit"] = "Lars Walther"
-#data["person_arbeitsverantwortlichkeit"] = "Lars Walther"
-#data["person_arbeitsausfuehrung"] = "Seppo Walther"
-#data["zusaetzliche_schutzausrüstung_elektrischerschlag"] = "x"
-#data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = "x"
-
 # 1
 
 data["art_der_freischaltung"] = input.get('#/properties/edi151f290f01614c52ba070de4f768e1f9')
