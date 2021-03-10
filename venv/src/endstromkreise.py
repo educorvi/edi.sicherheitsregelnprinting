@@ -55,20 +55,13 @@ data["schaltsperre"] = input.get('#/properties/edid27d8666a87a455c96e03b46bc81ed
 data["schalten_verboten"] = input.get('#/properties/edifef867c48d994dd7a9bead41c0a9dc1d')
 
 # 3
-"""
+
 data["spannungspruefer"] = input.get('#/properties/edi53fa934512eb411eaa2f82e45678d4bd')
 data["usv"] = input.get('#/properties/edi7c3c497dd89c4eaeb2c142b36a8a44b9')
-"""
-
-data["spannungspruefer"] = "3M Voltage Meter x559m"
-data["usv"] = "ja"
 
 # 4
-"""
-data["euk_wo_eingebaut"] = input.get('#/properties/edib56dfa856ce84e9a92d61f2920c53f98')
-"""
 
-data["euk_wo_eingebaut"] = "an der Sammelschiene"
+data["euk_wo_eingebaut"] = input.get('#/properties/edib56dfa856ce84e9a92d61f2920c53f98')
 
 # 5
 """
