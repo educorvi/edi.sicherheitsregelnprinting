@@ -36,6 +36,7 @@ else:
 # 1
 
 data["art_der_freischaltung"] = input.get('#/properties/edi4ed9533af063465dbd40ede7ce144b34')
+import pdb; pdb.set_trace()
 
 if data["art_der_freischaltung"] == "LS-Schalter":
     data["ausloesestrom"] = input.get('#/properties/edi595058c14f914f97913f1982c3ee63ed')
