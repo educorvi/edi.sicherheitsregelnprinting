@@ -1,5 +1,5 @@
 from fpdf import FPDF
-from importdata import input
+from importdata import elektrohandwerk_schaltanlagen as input
 
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()

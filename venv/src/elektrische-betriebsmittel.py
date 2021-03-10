@@ -1,7 +1,5 @@
-# Template ohne Radiobutton bei Kopffragen
-
 from fpdf import FPDF
-from importdata import input
+from importdata import elektrische_betriebsmittel as input
 
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()

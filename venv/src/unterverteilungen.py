@@ -2,7 +2,7 @@
 #Stehen andere Anlagenteile weiterhin unter Spannung, so dass der Arbeitsbereich z. B. mit Ketten oder Bändern gekennzeichnet oder abgegrenzt werden muss?
 
 from fpdf import FPDF
-from importdata import input
+from importdata import unterverteilung as input
 
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
