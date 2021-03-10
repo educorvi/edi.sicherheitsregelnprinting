@@ -126,6 +126,11 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 
+#Adding new page
+
+pdf.add_page()
+pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
+
 # 1 Freigeschaltet
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -147,11 +152,6 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 pdf.set_font('DGUVMeta-Normal', 'u', 14)
 pdf.set_xy(104, 260)
 pdf.cell(0, 0, data.get("ort_der_freischaltung"))
-
-#Adding new page
-
-pdf.add_page()
-pdf.image("vorlage9-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 2 Gegen Wiedereinschalten gesichert
 
