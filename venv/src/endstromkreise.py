@@ -34,8 +34,8 @@ else:
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 
 # 1
-"""
-# data["art_der_freischaltung"] = input.get('#/properties/edi4ed9533af063465dbd40ede7ce144b34')
+
+data["art_der_freischaltung"] = input.get('#/properties/edi4ed9533af063465dbd40ede7ce144b34')
 
 if data["art_der_freischaltung"] == "LS-Schalter":
     data["ausloesestrom"] = input.get('#/properties/edi595058c14f914f97913f1982c3ee63ed')
@@ -47,11 +47,6 @@ else:
     data["ausloesestrom"] = "/"
 
 data["ort_der_freischaltung"] = input.get('#/properties/edi86c60abee95a45c8886de483c2b84e91')
-"""
-
-data["art_der_freischaltung"] = "LS-Schalter"
-data["ausloesestrom"] = "50"
-data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
 
 # 2
 """
