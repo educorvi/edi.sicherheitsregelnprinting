@@ -64,11 +64,8 @@ data["usv"] = input.get('#/properties/edi7c3c497dd89c4eaeb2c142b36a8a44b9')
 data["euk_wo_eingebaut"] = input.get('#/properties/edib56dfa856ce84e9a92d61f2920c53f98')
 
 # 5
-"""
-data["ziel_der_abdeckung"] = input.get('#/properties/edi5cac8aded5f245d4964d289ba11c3d9d')
-"""
 
-data["ziel_der_abdeckung"] = "Personenschutz"
+data["ziel_der_abdeckung"] = input.get('#/properties/edi5cac8aded5f245d4964d289ba11c3d9d')
 
 # Title
 
