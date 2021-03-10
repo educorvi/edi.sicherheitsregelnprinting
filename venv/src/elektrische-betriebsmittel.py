@@ -54,10 +54,6 @@ else:
 
 data["ort_der_freischaltung"] = input.get('#/properties/edi17b019e086414ea48e6be09cb1fd27a1')
 
-#data["art_der_freischaltung"] = "LS-Schalter"
-#data["ausloesestrom"] = "50"
-#data["ort_der_freischaltung"] = "Unterverteilung: 5303492"
-
 # 2
 """
 data["sperrelement"] = input.get('#/properties/')
