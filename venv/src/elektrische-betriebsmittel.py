@@ -172,11 +172,21 @@ pdf.cell(0, 0, data.get("schaltsperre"))
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 100.5)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
+pdf.cell(0, 0, 'Wurde ein Reparaturschalter mit einem Vorhängeschloss versehen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 105.5)
+pdf.cell(0, 0, data.get("reparaturschalter"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 112)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 117)
 pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
