@@ -54,11 +54,8 @@ data["reparaturschalter"] = input.get('#/properties/edi6d1af6f810f640d981df09951
 data["schalten_verboten"] = input.get('#/properties/edi028811b628af49e880cffa21a1fc62bb')
 
 # 3
-"""
-data["spannungspruefer"] = input.get('#/properties/')
-"""
 
-data["spannungspruefer"] = "3M Voltage Meter x559m"
+data["spannungspruefer"] = input.get('#/properties/edi5176dc0fe64f4fa1a2b31ce19e29403f')
 
 # 4
 """
@@ -186,12 +183,14 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 105)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 110)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
