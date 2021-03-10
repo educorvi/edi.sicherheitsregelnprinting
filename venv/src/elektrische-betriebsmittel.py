@@ -1,3 +1,5 @@
+# Template ohne Radiobutton bei Kopffragen
+
 from fpdf import FPDF
 from importdata import input
 
@@ -66,11 +68,17 @@ else:
     data["geerdet_begruendung"] = ""
 
 # 5
-"""
-data["ziel_der_abdeckung"] = input.get('#/properties/')
-"""
 
-data["ziel_der_abdeckung"] = "Personenschutz"
+data["ziel_der_abdeckung"] = input.get('#/properties/edicb98d6e5aadb415b8a13ba97621832ef')
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edidf6523c6c376412b8502d346715aa3ee'))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edi48105f3d939e4d6c9d7a483ab1e38675'))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edi498bef640c6a45008d44d5992a3a21ac')
+else:
+    data["art_der_abdeckung"] = ""
 
 # Kopffragen
 
@@ -217,12 +225,28 @@ pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 190)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 236.6)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 195)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 241.6)
 pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 248.1)
+if data["ziel_der_abdeckung"] != "Abdeckung nicht notwendig":
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+else:
+    pdf.cell(0, 0, 'keine Abdeckung angebracht, weil:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 253.1)
+pdf.cell(0, 0, data.get("art_der_abdeckung"))
+
 
 pdf.output("elektrische-betriebsmittel.pdf", "F")
