@@ -58,13 +58,12 @@ data["schalten_verboten"] = input.get('#/properties/edi028811b628af49e880cffa21a
 data["spannungspruefer"] = input.get('#/properties/edi5176dc0fe64f4fa1a2b31ce19e29403f')
 
 # 4
-"""
-data["euk_wo_eingebaut"] = input.get('#/properties/')
-data["geerdet_begruendung"] = input.get('#/properties/')
-"""
 
-data["euk_wo_eingebaut"] = "an der Sammelschiene"
-data["geerdet_begruendung"] = "Richtiger Einbau erfolgt"
+data["euk_wo_eingebaut"] = input.get('#/properties/edi4deef32aa18848f68fa0ab082a88f141')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edi5e66ed0080b74d80af012ad33cde01f6')
+else:
+    data["geerdet_begruendung"] = ""
 
 # 5
 """
@@ -195,24 +194,25 @@ pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 145)
-pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 189)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 150)
-pdf.cell(0, 0, 'eingebaut?')
-
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 155)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 194)
 pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
-pdf.set_font('DGUVMeta-Normal', '', 14)
-pdf.set_xy(104, 165)
-pdf.cell(0, 0, 'Begründung:')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35,31,32)
+    pdf.set_xy(12.7, 200.5)
+    pdf.cell(0, 0, 'Begründung:')
 
-pdf.set_font('DGUVMeta-Normal', 'u', 14)
-pdf.set_xy(104, 170)
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 205.5)
 pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
