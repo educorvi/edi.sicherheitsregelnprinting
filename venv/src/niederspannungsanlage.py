@@ -41,6 +41,34 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
+# 1
+
+data["art_der_freischaltung"] = input.get('#/properties/edia35d5a284cfd441c8e85d75491d7b2b0')
+
+if data["art_der_freischaltung"] == "NH-Sicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edi6ac532fc3bb3466bb37bf9fa0fe69723')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
+    data["ausloesestrom"] = input.get('#/properties/edi91a3dd70963646b1a1b97d61c7e4a82a')
+elif data["art_der_freischaltung"] == "Leistungsschalter":
+    data["ausloesestrom"] = input.get('#/properties/edia0d7558f2b2742cc93296ecbdaafb6ea')
+elif data["art_der_freischaltung"] == "Trenner geöffnet":
+    data["ausloesestrom"] = input.get('#/properties/edi58b116e71fed42d08e9d13d7ccdcd1d7')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi5a7f273428f74de489972b6913c66075')
+
+if data["ort_der_freischaltung"] == "Trafostation":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi3d04e27bf3ea4b699896ebb282d85cfa')
+elif data["ort_der_freischaltung"] == "Umspannwerk/-anlage":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edicd578854837541c8b00db113e7f28a67')
+elif data["ort_der_freischaltung"] == "Station Niederspannung":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi51afae6421aa4aa593e6280ae0e87f01')
+elif data["ort_der_freischaltung"] == "Schaltfeld Niederspannung":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi3859034e0e724ceabb64955eb53fc3d4')
+else:
+    data["ort_nroderbezeichnung"] = "/"
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -120,25 +148,35 @@ pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 31)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 29.2)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 36)
-pdf.cell(0, 0, 'NH-Lastschaltleiste')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 34.2)
+pdf.cell(0, 0, data.get("art_der_freischaltung"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 46)
-pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 39.2)
+pdf.cell(0, 0, 'Auslösestrom: %s A' % data.get("ausloesestrom"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 56)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 50)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 61)
-pdf.cell(0, 0, 'Trafostation %s ' % '55934')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 55)
+pdf.cell(0, 0, data.get("ort_der_freischaltung"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 60)
+pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
