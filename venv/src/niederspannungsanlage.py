@@ -58,6 +58,60 @@ pdf.set_text_color(0,140,142)
 pdf.set_xy(12.7, 83.5)
 pdf.cell(0, 0, 'Industrie')
 
+# Kopffragen
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(13, 107)
+pdf.set_text_color(0,0,0)
+pdf.cell(0, 0, data.get("arbeitsstelle"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(13, 126)
+pdf.cell(0, 0, data.get("datum_uhrzeit"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(13, 145)
+pdf.cell(0, 0, data.get("person_anlageverantwortlichkeit"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(13, 164)
+pdf.cell(0, 0, data.get("person_arbeitsverantwortlichkeit"))
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(13, 183)
+pdf.cell(0, 0, data.get("person_arbeitsausfuehrung"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 208.5)
+pdf.cell(0, 0, "gegen elektrischen Schlag")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(14.3, 208.3)
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_elektrischerschlag"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 208.5)
+pdf.cell(0, 0, "gegen Störlichbogen")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(72.2, 208.3)
+pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 232)
+pdf.cell(0, 0, "ja")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(14.4, 231.6)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 232)
+pdf.cell(0, 0, "nein")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(72.2, 231.6)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 # 1 Freigeschaltet
 
