@@ -200,25 +200,35 @@ pdf.cell(0, 0, data.get("nroderbezeichnung1a"))
 
 # 1b Freigeschaltet Ausschaltstelle 2
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 78)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 78)
 pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 83)
-pdf.cell(0, 0, 'NH-Lastschaltleiste')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 83)
+pdf.cell(0, 0, data.get("art_der_freischaltung1b"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 93)
-pdf.cell(0, 0, 'Auslösestrom: %s A' % '50')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 103)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 89.5)
 pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 108)
-pdf.cell(0, 0, 'Trafostation %s ' % '55934')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 94.5)
+pdf.cell(0, 0, data.get("ort_der_freischaltung1b"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 101)
+pdf.cell(0, 0, 'Nr. oder Bezeichnung:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 106)
+pdf.cell(0, 0, data.get("nroderbezeichnung1b"))
 
 # 2a Gegen Wiedereinschalten gesichert Ausschaltstelle 1
 
