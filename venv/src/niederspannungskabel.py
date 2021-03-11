@@ -67,27 +67,27 @@ elif data["ort_der_freischaltung1a"] == "Niederspannungs-Schaltstation":
 
 # 1B
 
-data["art_der_freischaltung"] = input.get('#/properties/edi0df2502e80594c2d9df307d0f939562f')
+data["art_der_freischaltung1b"] = input.get('#/properties/edi0df2502e80594c2d9df307d0f939562f')
 
-if data["art_der_freischaltung"] == "NH-Sicherungen":
-    data["ausloesestrom"] = input.get('#/properties/edi7b8b089113024ab69c2133a6295219a8')
-elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
-    data["ausloesestrom"] = input.get('#/properties/edi71229e67f15042d49d1bedbab36e5e9d')
-elif data["art_der_freischaltung"] == "Leistungsschalter":
-    data["ausloesestrom"] = input.get('#/properties/edid7c9a6a76c3d453ca2454be566b04301')
+if data["art_der_freischaltung1b"] == "NH-Sicherungen":
+    data["ausloesestrom1b"] = input.get('#/properties/edi7b8b089113024ab69c2133a6295219a8')
+elif data["art_der_freischaltung1b"] == "NH-Lastschaltleiste":
+    data["ausloesestrom1b"] = input.get('#/properties/edi71229e67f15042d49d1bedbab36e5e9d')
+elif data["art_der_freischaltung1b"] == "Leistungsschalter":
+    data["ausloesestrom1b"] = input.get('#/properties/edid7c9a6a76c3d453ca2454be566b04301')
 else:
-    data["ausloesestrom"] = "/"
+    data["ausloesestrom1b"] = "/"
 
-data["ort_der_freischaltung"] = input.get('#/properties/edicbf3dd9390984bf8813716bbe56b59ee')
+data["ort_der_freischaltung1b"] = input.get('#/properties/edicbf3dd9390984bf8813716bbe56b59ee')
 
-if data["ort_der_freischaltung"] == "Kabelverteilerschrank":
-    data["nroderbezeichnung"] = input.get('#/properties/edi022ee3cb58684aafa3cdf0fc711db5c6')
-elif data["ort_der_freischaltung"] == "Trafostation":
-    data["nroderbezeichnung"] = input.get('#/properties/edi62df182f4cc542b294471fd7e02e13ba')
-elif data["ort_der_freischaltung"] == "Niederspannungs-Hauptverteilung":
-    data["nroderbezeichnung"] = input.get('#/properties/edia32c8b9872cd482ba67cfcadbddaea90')
-elif data["ort_der_freischaltung"] == "Niederspannungs-Schaltstation":
-    data["nroderbezeichnung"] = input.get('#/properties/edi202c14b3bb1241dc819115fd5b8bc8f6')
+if data["ort_der_freischaltung1b"] == "Kabelverteilerschrank":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edi022ee3cb58684aafa3cdf0fc711db5c6')
+elif data["ort_der_freischaltung1b"] == "Trafostation":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edi62df182f4cc542b294471fd7e02e13ba')
+elif data["ort_der_freischaltung1b"] == "Niederspannungs-Hauptverteilung":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edia32c8b9872cd482ba67cfcadbddaea90')
+elif data["ort_der_freischaltung1b"] == "Niederspannungs-Schaltstation":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edi202c14b3bb1241dc819115fd5b8bc8f6')
 
 # Title
 
