@@ -132,9 +132,9 @@ if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
 data["ziel_der_abdeckung"] = input.get('#/properties/edibbe242b53c1e4c20ac98cf1fccf1b44e')
 
 if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
-    data["art_der_abdeckung"] = input.get('#/properties/edicc76c15eb6f547a798da96afdaa62ebf')
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edicc76c15eb6f547a798da96afdaa62ebf'))
 elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
-    data["art_der_abdeckung"] = input.get('#/properties/edibcbcfe207cfb4ac3b55c1e65f6509f2c')
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edibcbcfe207cfb4ac3b55c1e65f6509f2c'))
 elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
     data["art_der_abdeckung"] = input.get('#/properties/edidb001b83c10742d89663636aa256f689')
 
@@ -427,8 +427,38 @@ pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 75)
-pdf.cell(0, 0, data.get("euk_wo"))
+pdf.set_xy(12.7, 118)
+pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
 
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 124.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 129.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 124.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 129.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 124.5)
+    pdf.cell(0, 0, 'Beründung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 129.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
 pdf.output("niederspannungskabel.pdf", "F")
