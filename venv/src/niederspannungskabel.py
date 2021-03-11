@@ -43,27 +43,27 @@ else:
 
 # 1A
 
-data["art_der_freischaltung"] = input.get('#/properties/edia5679b847b3e4c4598e9349227d4299b')
+data["art_der_freischaltung1a"] = input.get('#/properties/edia5679b847b3e4c4598e9349227d4299b')
 
-if data["art_der_freischaltung"] == "NH-Sicherungen":
-    data["ausloesestrom"] = input.get('#/properties/edid605559080d64bbb8d4850749dc12f1c')
-elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
-    data["ausloesestrom"] = input.get('#/properties/edi12145ea0507746278169217acf02dd81')
-elif data["art_der_freischaltung"] == "Leistungsschalter":
-    data["ausloesestrom"] = input.get('#/properties/edi0403a154b0554947af6b9431278d993a')
+if data["art_der_freischaltung1a"] == "NH-Sicherungen":
+    data["ausloesestrom1a"] = input.get('#/properties/edid605559080d64bbb8d4850749dc12f1c')
+elif data["art_der_freischaltung1a"] == "NH-Lastschaltleiste":
+    data["ausloesestrom1a"] = input.get('#/properties/edi12145ea0507746278169217acf02dd81')
+elif data["art_der_freischaltung1a"] == "Leistungsschalter":
+    data["ausloesestrom1a"] = input.get('#/properties/edi0403a154b0554947af6b9431278d993a')
 else:
-    data["ausloesestrom"] = "/"
+    data["ausloesestrom1a"] = "/"
 
-data["ort_der_freischaltung"] = input.get('#/properties/edi838ee883350146549eaf39b9699e1293')
+data["ort_der_freischaltung1a"] = input.get('#/properties/edi838ee883350146549eaf39b9699e1293')
 
-if data["ort_der_freischaltung"] == "Kabelverteilerschrank":
-    data["nroderbezeichnung"] = input.get('#/properties/edi778ae09c2a7d4430b457f10809926977')
-elif data["ort_der_freischaltung"] == "Trafostation":
-    data["nroderbezeichnung"] = input.get('#/properties/edic1240cd04d36417cacc2235fc1e82284')
-elif data["ort_der_freischaltung"] == "Niederspannungs-Hauptverteilung":
-    data["nroderbezeichnung"] = input.get('#/properties/edi17167f2ec33d4ea2839e56ff60131387')
-elif data["ort_der_freischaltung"] == "Niederspannungs-Schaltstation":
-    data["nroderbezeichnung"] = input.get('#/properties/edi198e6b2542674ebab13c94d75af66149')
+if data["ort_der_freischaltung1a"] == "Kabelverteilerschrank":
+    data["nroderbezeichnung1a"] = input.get('#/properties/edi778ae09c2a7d4430b457f10809926977')
+elif data["ort_der_freischaltung1a"] == "Trafostation":
+    data["nroderbezeichnung1a"] = input.get('#/properties/edic1240cd04d36417cacc2235fc1e82284')
+elif data["ort_der_freischaltung1a"] == "Niederspannungs-Hauptverteilung":
+    data["nroderbezeichnung1a"] = input.get('#/properties/edi17167f2ec33d4ea2839e56ff60131387')
+elif data["ort_der_freischaltung1a"] == "Niederspannungs-Schaltstation":
+    data["nroderbezeichnung1a"] = input.get('#/properties/edi198e6b2542674ebab13c94d75af66149')
 
 # 1B
 
@@ -176,7 +176,7 @@ pdf.cell(0, 0, 'Wie erfolgte die Freischaltung?')
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 34.2)
-pdf.cell(0, 0, data.get("art_der_freischaltung"))
+pdf.cell(0, 0, data.get("art_der_freischaltung1a"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
@@ -186,7 +186,7 @@ pdf.cell(0, 0, 'Wo erfolgte die Freischaltung?')
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 45.7)
-pdf.cell(0, 0, data.get("ort_der_freischaltung"))
+pdf.cell(0, 0, data.get("ort_der_freischaltung1a"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
@@ -196,7 +196,7 @@ pdf.cell(0, 0, 'Nr. oder Bezeichnung:')
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 57.2)
-pdf.cell(0, 0, data.get("nroderbezeichnung"))
+pdf.cell(0, 0, data.get("nroderbezeichnung1a"))
 
 # 1b Freigeschaltet Ausschaltstelle 2
 
