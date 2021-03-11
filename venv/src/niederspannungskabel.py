@@ -124,6 +124,9 @@ else:
 
 data["euk_wo"] = input.get('#/properties/edi6b1886d59d804474b114fae396943ef7')
 
+if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
+    data["euk_begruendung"] = input.get('#/properties/edid49863db8c2c40a3a824f3302bfcb217')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -381,27 +384,33 @@ if data["pruefungsart3c"] == "Andere Methode":
     pdf.set_xy(12.7, 44.5)
     pdf.cell(0, 0, data.get("erlauterung3c"))
 
-# 4a Geerdet und kurzgeschlossen Ausschaltstelle 1
+# 4 Geerdet und kurzgeschlossen an den Ausschaltstellen
 
-"""
-Work in progress
-"""
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 70)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung in die NH-Sicherungsunterteile eingebaut?')
 
-# 4b Geerdet und krzgeschlossen Ausschaltstelle 2
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 75)
+pdf.cell(0, 0, data.get("euk_wo"))
 
-"""
-Work in progress
-"""
+if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 81.5)
+    pdf.cell(0, 0, 'Begründung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 86.5)
+    pdf.cell(0, 0, data.get("euk_begruendung"))
+
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 98)
-pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 103)
-pdf.cell(0, 0, 'Nichts')
 
 
 pdf.output("niederspannungskabel.pdf", "F")
