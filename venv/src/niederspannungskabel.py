@@ -101,6 +101,14 @@ data["sicherungsart2b"] = input.get('#/properties/edi8d73b9ab15f745a2ba818fbff94
 data["schloss2b"] = input.get('#/properties/edia339c41b72c74c01a6e0165eec4b0b10')
 data["schalten_verboten2b"] = input.get('#/properties/edi6f75580051fe46818f92df966464667e')
 
+# 3A
+
+data["spannungspruefer3a"] = input.get('#/properties/edi571f6a3a096845bcafca86ab6739ddcd')
+
+# 3B
+
+data["spannungspruefer3b"] = input.get('#/properties/edief48d58a0dd6465996714a0b51a39937')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -308,23 +316,27 @@ pdf.cell(0, 0, data.get("schalten_verboten2b"))
 
 # 3a Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle1
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 225)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 238)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 230)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 243)
+pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
 # 3b Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle2
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 265)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 238)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 270)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 243)
+pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
 # 4a Geerdet und kurzgeschlossen Ausschaltstelle 1
 
