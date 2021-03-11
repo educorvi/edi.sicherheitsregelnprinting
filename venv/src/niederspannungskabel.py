@@ -326,7 +326,24 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 243)
 pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
-# 3b Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle2
+# 3b Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle 2
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 266)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 271)
+pdf.cell(0, 0, data.get("spannungspruefer3b"))
+
+# Adding new page
+
+pdf.add_page()
+pdf.image("newtemplate3_seite3.jpg", x=-4, y=-8, w=217, h=313)
+
+# 3c Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
@@ -351,9 +368,6 @@ Work in progress
 """
 
 # 5 Mit der Abdeckung soll erreicht werden
-
-pdf.add_page()
-pdf.image("vorlage3-Seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 pdf.set_font('Arial', '', 14)
 pdf.set_xy(108, 98)
