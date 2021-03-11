@@ -77,6 +77,11 @@ pdf.set_text_color(0,73,148)
 pdf.set_xy(12.7, 68)
 pdf.cell(0, 0, 'Endstromkreisen')
 
+pdf.set_font('DGUVMeta-Bold', '', 14)
+pdf.set_text_color(0,140,142)
+pdf.set_xy(12.7, 83.5)
+pdf.cell(0, 0, 'Elektrohandwerk S145')
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
