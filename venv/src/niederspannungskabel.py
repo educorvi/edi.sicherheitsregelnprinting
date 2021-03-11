@@ -274,6 +274,38 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 158)
 pdf.cell(0, 0, data.get("schalten_verboten2a"))
 
+# 2b Gegen Wiedereinschalten gesichert Ausschaltstelle 2
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 179)
+pdf.cell(0, 0, 'Wie wurde gesichert?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 184)
+pdf.cell(0, 0, data.get("sicherungsart2b"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 190.5)
+pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am (Leistungs-) Schalter eingehängt und abgeschlossen?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 195.5)
+pdf.cell(0, 0, data.get("schloss2b"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 202)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 207)
+pdf.cell(0, 0, data.get("schalten_verboten2b"))
+
 # 3a Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle1
 
 pdf.set_font('Arial', '', 14)
