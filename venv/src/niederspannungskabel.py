@@ -127,6 +127,17 @@ data["euk_wo"] = input.get('#/properties/edi6b1886d59d804474b114fae396943ef7')
 if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
     data["euk_begruendung"] = input.get('#/properties/edid49863db8c2c40a3a824f3302bfcb217')
 
+# 5
+
+data["ziel_der_abdeckung"] = input.get('#/properties/edibbe242b53c1e4c20ac98cf1fccf1b44e')
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    data["art_der_abdeckung"] = input.get('#/properties/edicc76c15eb6f547a798da96afdaa62ebf')
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = input.get('#/properties/edibcbcfe207cfb4ac3b55c1e65f6509f2c')
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edidb001b83c10742d89663636aa256f689')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -407,10 +418,17 @@ if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
     pdf.set_xy(12.7, 86.5)
     pdf.cell(0, 0, data.get("euk_begruendung"))
 
-
 # 5 Mit der Abdeckung soll erreicht werden
 
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 113)
+pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 75)
+pdf.cell(0, 0, data.get("euk_wo"))
 
 
 pdf.output("niederspannungskabel.pdf", "F")
