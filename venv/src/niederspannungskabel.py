@@ -31,6 +31,16 @@ if 'gegen Störlichtbogen' in input.get('#/properties/zusatzliche-personliche-sc
 else:
     data["zusaetzliche_schutzausrüstung_stoerlichtbogen"] = ""
 
+if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "ja":
+    data["abgrenzung_arbeitsbereich_ja"] = "x"
+else:
+    data["abgrenzung_arbeitsbereich_ja"] = ""
+
+if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein":
+    data["abgrenzung_arbeitsbereich_nein"] = "x"
+else:
+    data["abgrenzung_arbeitsbereich_nein"] = ""
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -69,6 +79,22 @@ pdf.cell(0, 0, "gegen Störlichbogen")
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 208.3)
 pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(20, 232)
+pdf.cell(0, 0, "ja")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(14.4, 231.6)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_ja"))
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_xy(78, 232)
+pdf.cell(0, 0, "nein")
+
+pdf.set_font('DGUVMeta-Normal', '', 14)
+pdf.set_xy(72.2, 231.6)
+pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
 
 # 1a Freigeschaltet Ausschaltstelle 1
