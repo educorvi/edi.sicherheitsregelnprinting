@@ -78,6 +78,14 @@ data["schalten_verboten"] = input.get('#/properties/edibc8dd2af0a9446eca50e69cf6
 
 data["spannungspruefer"] = input.get('#/properties/edid0e606c47a8942f3b34084387a472765')
 
+# 4
+
+data["euk_wo_eingebaut"] = input.get('#/properties/edi680c885614ec477a8c7c808dfceee698')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edi17f2674f513b4061b60db0e7a23e3ab5')
+else:
+    data["geerdet_begruendung"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
