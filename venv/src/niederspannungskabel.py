@@ -89,6 +89,18 @@ elif data["ort_der_freischaltung1b"] == "Niederspannungs-Hauptverteilung":
 elif data["ort_der_freischaltung1b"] == "Niederspannungs-Schaltstation":
     data["nroderbezeichnung1b"] = input.get('#/properties/edi202c14b3bb1241dc819115fd5b8bc8f6')
 
+# 2A
+
+data["sicherungsart2a"] = input.get('#/properties/edi768f4be54bbd4240b2dd16399e55f066')
+data["schloss2a"] = input.get('#/properties/edica45a1857afe4978b343dbd395cde252')
+data["schalten_verboten2a"] = input.get('#/properties/edi1326f85283674efab4f65b147f6ccc3a')
+
+# 2B
+
+data["sicherungsart2b"] = input.get('#/properties/edi8d73b9ab15f745a2ba818fbff946d9d5')
+data["schloss2b"] = input.get('#/properties/edia339c41b72c74c01a6e0165eec4b0b10')
+data["schalten_verboten2b"] = input.get('#/properties/edi6f75580051fe46818f92df966464667e')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
