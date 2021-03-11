@@ -111,7 +111,7 @@ pdf.cell(0, 0, '(unterspannungsseitig)')
 pdf.set_font('DGUVMeta-Bold', '', 14)
 pdf.set_text_color(0,140,142)
 pdf.set_xy(12.7, 83.5)
-pdf.cell(0, 0, 'Elektrohandwerk S143')
+pdf.cell(0, 0, 'Elektrohandwerk')
 
 # Kopffragen
 
