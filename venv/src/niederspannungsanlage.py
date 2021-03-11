@@ -86,6 +86,21 @@ if data["euk_wo_eingebaut"] == "nicht geerdet und kurzgeschlossen":
 else:
     data["geerdet_begruendung"] = ""
 
+# 5
+
+data["ziel_der_abdeckung"] = input.get('#/properties/edi6aaa1d808e73457eb35f948454814269')
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edi2b1edc26849c4438ac6f2d9222d66f80'))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edib0c92d29081b4298820b32cf6e5764d7'))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edieb5d81daecfd41e686b10c4cda28eeac')
+    data["entfernung"] = input.get('#/properties/edi1da040c5a8984862849fb05a585069a6KA')
+else:
+    data["art_der_abdeckung"] = ""
+
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
