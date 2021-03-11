@@ -8,7 +8,7 @@ pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
 pdf.add_font('DGUVMeta-Bold', '', 'DGUVMeta-Bold.ttf', uni=True)
 pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 
-pdf.image("newtemplate1_seite1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate3_seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
 input = input.get("data")
@@ -65,7 +65,22 @@ elif data["ort_der_freischaltung"] == "Niederspannungs-Hauptverteilung":
 elif data["ort_der_freischaltung"] == "Niederspannungs-Schaltstation":
     data["nroderbezeichnung"] = input.get('#/properties/edi198e6b2542674ebab13c94d75af66149')
 
+# Title
 
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 58.5)
+pdf.cell(0, 0, 'Arbeiten an Kabeln')
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 68)
+pdf.cell(0, 0, 'in der Niederspannung')
+
+pdf.set_font('DGUVMeta-Bold', '', 14)
+pdf.set_text_color(0,140,142)
+pdf.set_xy(12.7, 83.5)
+pdf.cell(0, 0, 'Industrie S140')
 
 # Kopffragen
 
@@ -125,7 +140,7 @@ pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 #Adding new page
 
 pdf.add_page()
-pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate3_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1a Freigeschaltet Ausschaltstelle 1
 
