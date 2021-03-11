@@ -69,6 +69,11 @@ elif data["ort_der_freischaltung"] == "Schaltfeld Niederspannung":
 else:
     data["ort_nroderbezeichnung"] = "/"
 
+# 2
+
+data["sicherungsart"] = input.get('#/properties/edicc623be9685e4de8b5963d52533abae5')
+data["schalten_verboten"] = input.get('#/properties/edibc8dd2af0a9446eca50e69cf66ea27c5')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
