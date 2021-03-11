@@ -269,12 +269,46 @@ if data["euk_wo_eingebaut"] == "nicht geerdet und kurzgeschlossen":
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 251)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 113)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 256)
-pdf.cell(0, 0, 'Nichts')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 118)
+pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 124.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 129.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 124.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 129.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 124.5)
+    pdf.cell(0, 0, 'Begründung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 129.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+
 
 pdf.output("niederspannungsanlage.pdf", "F")

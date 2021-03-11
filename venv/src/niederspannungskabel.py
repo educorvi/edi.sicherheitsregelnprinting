@@ -454,7 +454,7 @@ elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
     pdf.set_font('DGUVMeta-Bold', '', 10)
     pdf.set_text_color(35, 31, 32)
     pdf.set_xy(12.7, 124.5)
-    pdf.cell(0, 0, 'Beründung:')
+    pdf.cell(0, 0, 'Begründung:')
 
     pdf.set_font('DGUVMeta-Normal', '', 10)
     pdf.set_text_color(0, 0, 0)
