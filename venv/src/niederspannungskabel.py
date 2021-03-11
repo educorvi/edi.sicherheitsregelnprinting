@@ -244,47 +244,35 @@ pdf.cell(0, 0, data.get("nroderbezeichnung1b"))
 
 # 2a Gegen Wiedereinschalten gesichert Ausschaltstelle 1
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 124)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 130)
 pdf.cell(0, 0, 'Wie wurde gesichert?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 129)
-pdf.cell(0, 0, 'Steuersicherung entfernt')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 135)
+pdf.cell(0, 0, data.get("sicherungsart2a"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 139)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 141.5)
+pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am (Leistungs-) Schalter eingehängt und abgeschlossen?')
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 144)
-pdf.cell(0, 0, 'zusaetzlich angebracht?')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 146.5)
+pdf.cell(0, 0, data.get("schloss2a"))
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 149)
-pdf.cell(0, 0, 'magnetisch')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 153)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
-# 2b Gegen Wiedereinschalten gesichert Ausschaltstelle 1
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 171)
-pdf.cell(0, 0, 'Wie wurde gesichert?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 176)
-pdf.cell(0, 0, 'Steuersicherung entfernt')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 186)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
-
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 191)
-pdf.cell(0, 0, 'zusaetzlich angebracht?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 196)
-pdf.cell(0, 0, 'magnetisch')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 158)
+pdf.cell(0, 0, data.get("schalten_verboten2a"))
 
 # 3a Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle1
 
