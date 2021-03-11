@@ -185,25 +185,25 @@ pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 100)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 77.5)
 pdf.cell(0, 0, 'Wie wurde gesichert?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 105)
-pdf.cell(0, 0, 'Steuersicherung entfernt')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 82.5)
+pdf.cell(0, 0, data.get("sicherungsart"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 120)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 89)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 125)
-pdf.cell(0, 0, 'zusätzlich angebracht?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 130)
-pdf.cell(0, 0, 'magnetisch befestigt')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 94)
+pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
