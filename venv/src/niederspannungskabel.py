@@ -1,3 +1,5 @@
+#4 Tippfehler?
+
 from fpdf import FPDF
 from importdata import niederspannungskabel as input
 
