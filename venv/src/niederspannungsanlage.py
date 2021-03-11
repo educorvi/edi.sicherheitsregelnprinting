@@ -74,6 +74,10 @@ else:
 data["sicherungsart"] = input.get('#/properties/edicc623be9685e4de8b5963d52533abae5')
 data["schalten_verboten"] = input.get('#/properties/edibc8dd2af0a9446eca50e69cf66ea27c5')
 
+# 3
+
+data["spannungspruefer"] = input.get('#/properties/edid0e606c47a8942f3b34084387a472765')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -207,13 +211,15 @@ pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 178)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 183)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 141)
+pdf.cell(0, 0, data.get("spannungspruefer"))
 
 # 4 Geerdet und kurzgeschlossen
 
