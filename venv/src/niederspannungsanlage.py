@@ -97,7 +97,7 @@ elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
 elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
     data["art_der_abdeckung"] = input.get('#/properties/edieb5d81daecfd41e686b10c4cda28eeac')
     if data.get("art_der_abdeckung") == "die Entfernung beträgt ca.:":
-        data["entfernung"] = input.get('#/properties/edi1da040c5a8984862849fb05a585069a6KA')
+        data["entfernung"] = input.get('#/properties/edi1da040c5a8984862849fb05a585069a6')
 else:
     data["art_der_abdeckung"] = ""
 
@@ -315,7 +315,6 @@ elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
         pdf.set_font('DGUVMeta-Bold', '', 10)
         pdf.set_text_color(35, 31, 32)
         pdf.set_xy(12.7, 256.5)
-        pdf.cell(0, 0, str(data.get("entfernung")))
-
+        pdf.cell(0, 0, str(data.get("entfernung") + " Meter"))
 
 pdf.output("niederspannungsanlage.pdf", "F")
