@@ -118,6 +118,10 @@ if data["pruefungsart3c"] == "Andere Methode":
 else:
     data["erlauterung3c"] = ""
 
+# 4
+
+data["euk_wo"] = input.get('#/properties/edi6b1886d59d804474b114fae396943ef7')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
