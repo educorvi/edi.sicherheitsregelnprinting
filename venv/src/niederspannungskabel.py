@@ -109,6 +109,15 @@ data["spannungspruefer3a"] = input.get('#/properties/edi571f6a3a096845bcafca86ab
 
 data["spannungspruefer3b"] = input.get('#/properties/edief48d58a0dd6465996714a0b51a39937')
 
+# 3C
+
+data["pruefungsart3c"] = input.get('#/properties/edifc55d559eeb0405bba483ccb9193197d')
+
+if data["pruefungsart3c"] == "Andere Methode":
+    data["erlauterung3c"] = input.get('#/properties/edi3f2fdb49ce7a4357925e3f3abf998f94')
+else:
+    data["erlauterung3c"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -347,13 +356,24 @@ pdf.image("newtemplate3_seite3.jpg", x=-4, y=-8, w=217, h=313)
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 266)
-pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+pdf.set_xy(12.7, 28)
+pdf.cell(0, 0, 'Wie wurde geprüft?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 271)
-pdf.cell(0, 0, data.get("spannungspruefer3b"))
+pdf.set_xy(12.7, 33)
+pdf.cell(0, 0, data.get("pruefungsart3c"))
+
+if data["pruefungsart3c"] == "Andere Methode":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 39.5)
+    pdf.cell(0, 0, 'Erläuterung der Methode')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 44.5)
+    pdf.cell(0, 0, data.get("erlauterung3c"))
 
 # 4a Geerdet und kurzgeschlossen Ausschaltstelle 1
 
