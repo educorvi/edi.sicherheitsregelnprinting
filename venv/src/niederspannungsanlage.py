@@ -113,6 +113,11 @@ pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 
+#Adding new page
+
+pdf.add_page()
+pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
+
 # 1 Freigeschaltet
 
 pdf.set_font('Arial', '', 14)
