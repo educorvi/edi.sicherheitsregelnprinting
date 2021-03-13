@@ -3,7 +3,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 pdf.add_page()
 
-pdf.image("vorlage4.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate1_seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
