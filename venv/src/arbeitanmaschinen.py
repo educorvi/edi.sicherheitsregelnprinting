@@ -41,6 +41,35 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
+# 1
+
+data["art_der_freischaltung"] = input.get('#/properties/edi28afa3ee4d234949ad8d234d9aea29f9')
+
+if data["art_der_freischaltung"] == "NH-Sicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edi935e850a261444598644af53f08dcd32')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleiste":
+    data["ausloesestrom"] = input.get('#/properties/edi5d28dd3c9465429497162dd0518e05c0')
+elif data["art_der_freischaltung"] == "Leistungsschalter":
+    data["ausloesestrom"] = input.get('#/properties/edi53635db3c89e44aa81ef36372b2ac188')
+elif data["art_der_freischaltung"] == "Trenner geöffnet":
+    data["ausloesestrom"] = input.get('#/properties/edi898bfa6b08564c569e22437b853b6632')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi2ec234bab6ab4651b9e024e421a6556e')
+
+if data["ort_der_freischaltung"] == "Trafostation":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi7b6be3fa231b47d193febc77614abf20')
+elif data["ort_der_freischaltung"] == "Station Niederspannung":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edieda69f8934a840f5b6986f953e16fec4')
+elif data["ort_der_freischaltung"] == "Schaltfeld Niederspannung":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi43801a9ac06c471bb571823dbf676dd5')
+elif data["ort_der_freischaltung"] == "Unterverteilung/Stromkreis":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edibfbdfdc9a9a643bbb5e6de5689a22d74')
+else:
+    data["ort_nroderbezeichnung"] = "/"
+
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
