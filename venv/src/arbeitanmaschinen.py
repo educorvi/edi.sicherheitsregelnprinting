@@ -41,6 +41,23 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
+# Title
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 58.5)
+pdf.cell(0, 0, 'Arbeiten an Maschinen, Fertigungsanlagen')
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 68)
+pdf.cell(0, 0, 'oder anderen Verbrauchern')
+
+pdf.set_font('DGUVMeta-Bold', '', 14)
+pdf.set_text_color(0,140,142)
+pdf.set_xy(12.7, 83.5)
+pdf.cell(0, 0, 'Industrie')
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
