@@ -140,7 +140,7 @@ pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 #Adding new page
 
 pdf.add_page()
-pdf.image("newtemplate3_seite2.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate7_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1a Freigeschaltet Ausschaltstelle 1
 
