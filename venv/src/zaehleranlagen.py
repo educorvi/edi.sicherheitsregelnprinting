@@ -158,6 +158,38 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 82.5)
 pdf.cell(0, 0, data.get("schalten_verboten"))
 
+# 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 110)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 115)
+pdf.cell(0, 0, data.get("spannungspruefer"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 121.5)
+pdf.cell(0, 0, 'Rückspannung von benachbarten Zählerfeldern möglich?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 126.5)
+pdf.cell(0, 0, data.get("rueckspannung"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 133)
+pdf.cell(0, 0, 'Dezentrale Einspeisung vorhanden, z. B. USV, PV, Notstromaggregat?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 138)
+pdf.cell(0, 0, data.get("usv"))
+
 
 
 pdf.output("zaehleranlagen.pdf", "F")
