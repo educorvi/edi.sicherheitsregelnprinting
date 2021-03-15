@@ -63,6 +63,14 @@ data["spannungspruefer"] = input.get('#/properties/edica7f37a7fd3546b1bbe137efc4
 data["rueckspannung"] = input.get('#/properties/edi8c6b921bfaad450d968cf330bc85f998')
 data["usv"] = input.get('#/properties/edie2a09ff90b8d420b8ccad52756e2e9aa')
 
+# 4
+
+data["euk"] = input.get('#/properties/edieb6c9063a1914cd1adcee7d46b81ed49')
+if data["euk"] == "nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edida248b77b1f6458dab42a69b0485ced4')
+else:
+    data["geerdet_begruendung"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
