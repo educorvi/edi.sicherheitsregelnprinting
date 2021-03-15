@@ -70,6 +70,35 @@ if data["zusaetzlichfreigeschaltet1a"] == ['im Hausanschlusskasten (wegen dezent
 else:
     data["zusaetzlichfreigeschaltet1a"] = ''
 
+# 1B
+
+data["art_der_freischaltung1b"] = input.get('#/properties/ediaa9552464dcf4b7f96903f645ed53b63')
+
+if data["art_der_freischaltung1b"] == "NH-Sicherungen":
+    data["ausloesestrom1b"] = input.get('#/properties/edi1cb1f54ea8e041ff85d4b19d46b54f2d')
+elif data["art_der_freischaltung1b"] == "NH-Lastschaltleiste":
+    data["ausloesestrom1b"] = input.get('#/properties/edi378aec1700974f628e5a08c2b2f63d6c')
+elif data["art_der_freischaltung1b"] == "Leistungsschalter":
+    data["ausloesestrom1b"] = input.get('#/properties/edi004df17a3e1e4d299e0bd5123f0f18d0')
+else:
+    data["ausloesestrom1b"] = "/"
+
+data["ort_der_freischaltung1b"] = input.get('#/properties/edicda586dcbda14b88863b1e780bdcf787')
+
+if data["ort_der_freischaltung1b"] == "Kabelverteilerschrank":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edif856292285394eb7920585f54d02644a')
+elif data["ort_der_freischaltung1b"] == "Trafostation":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edi099d5d84e51e4e638fe8c175a2542e9f')
+elif data["ort_der_freischaltung1b"] == "Kompaktstation":
+    data["nroderbezeichnung1b"] = input.get('#/properties/edi017c5fa9e6cc48f284d71bf87d3e9d7f')
+
+data["zusaetzlichfreigeschaltet1b"] = input.get('#/properties/edid0995ee6abad4deeb59519bfb7440c32')
+
+if data["zusaetzlichfreigeschaltet1b"] == ['im Hausanschlusskasten (wegen dezentraler Einspeisung, z. B. PV-Anlage, BHKW)']:
+    data["zusaetzlichfreigeschaltet1b"] = 'im Hausanschlusskasten (wegen dezentraler Einspeisung, z. B. PV-Anlage, BHKW)'
+else:
+    data["zusaetzlichfreigeschaltet1b"] = ''
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
