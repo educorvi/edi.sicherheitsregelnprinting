@@ -262,8 +262,6 @@ pdf.cell(0, 0, data.get("spannungspruefer3b"))
 
 # 4 Geerdet und kurzgeschlossen
 
-# 4 Geerdet und kurzgeschlossen
-
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
 pdf.set_xy(12.7, 189)
