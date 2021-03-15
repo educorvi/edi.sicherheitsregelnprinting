@@ -71,6 +71,10 @@ data["vorhaengeschloss"] = input.get('#/properties/edib4ab8160289f41819e6d2e5593
 data["schalten_verboten"] = input.get('#/properties/edif621189f94544eb39bbf3ce37f9eb679')
 data["entzogene_nhsicherungen"] = input.get('#/properties/edi551233029165465ea737bcf4699b274e')
 
+# 3
+
+data["spannungspruefer"] = input.get('#/properties/edifa5cf2794b5b4e0c92096e2ce203fe06')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -211,6 +215,18 @@ pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 105.5)
 pdf.cell(0, 0, data.get("entzogene_nhsicherungen"))
+
+# 3 Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
+pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 141)
+pdf.cell(0, 0, data.get("spannungspruefer"))
 
 
 pdf.output("evu_niederspannungsschaltanlagen.pdf", "F")
