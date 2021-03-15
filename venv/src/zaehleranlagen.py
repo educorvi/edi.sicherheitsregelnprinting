@@ -111,7 +111,7 @@ pdf.cell(0, 0, data.get("zusaetzliche_schutzausrüstung_stoerlichtbogen"))
 #Adding new page
 
 pdf.add_page()
-pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate6_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 # 1 Freigeschaltet
 
