@@ -78,6 +78,10 @@ data["schalten_verboten"] = input.get('#/properties/edifa1a1d574a4149c48b2d1bedc
 
 data["spannungspruefer3a"] = input.get('#/properties/edi9eff5b18dc154de8895dbba3cc192249')
 
+# 3b
+
+data["spannungspruefer3b"] = input.get('#/properties/edi0ac2a3989a8842ddabc390e36d247b0c')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -155,7 +159,6 @@ pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
 pdf.add_page()
 pdf.image("newtemplate4_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
-
 # 1 Freigeschaltet
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
@@ -224,13 +227,15 @@ pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
 # 3b Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 157)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 162)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 163)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 167)
+pdf.cell(0, 0, data.get("spannungspruefer3b"))
 
 # 4 Geerdet und kurzgeschlossen
 
