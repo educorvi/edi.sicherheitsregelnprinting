@@ -53,6 +53,9 @@ else:
 
 data["ort_der_freischaltung"] = input.get('#/properties/edid693e96632ce48548a14e9215ba73a34')
 
+# 2
+
+data["schalten_verboten"] = input.get('#/properties/edi5e1db87b6ba84b9480d006df28e6150c')
 
 # Title
 
