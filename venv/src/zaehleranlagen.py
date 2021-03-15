@@ -8,7 +8,7 @@ pdf.add_font('DGUVMeta-Normal', '', 'DGUVMeta-Normal.ttf', uni=True)
 pdf.add_font('DGUVMeta-Bold', '', 'DGUVMeta-Bold.ttf', uni=True)
 pdf.add_font('DGUVMeta-NormalItalic', '', 'DGUVMeta-NormalItalic.ttf', uni=True)
 
-pdf.image("newtemplate1_seite1.jpg", x=-4, y=-8, w=217, h=313)
+pdf.image("newtemplate2_seite1.jpg", x=-4, y=-8, w=217, h=313)
 
 data = {}
 input = input.get("data")
