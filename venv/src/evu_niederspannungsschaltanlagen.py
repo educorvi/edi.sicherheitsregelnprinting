@@ -323,6 +323,4 @@ elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
         pdf.set_xy(12.7, 256.5)
         pdf.cell(0, 0, str(data.get("entfernung") + " Meter"))
 
-
-
 pdf.output("evu_niederspannungsschaltanlagen.pdf", "F")
