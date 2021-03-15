@@ -287,12 +287,51 @@ if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
 
 # 5 Mit der Abdeckung soll erreicht werden
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 245)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 235)
 pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 250)
-pdf.cell(0, 0, 'Nichts')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 240)
+pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 246.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 251.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 246.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 251.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 246.5)
+    pdf.cell(0, 0, 'Keine Abdeckung angebracht, weil:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 251.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+
+    if data.get("art_der_abdeckung") == "die Entfernung beträgt ca.:":
+        pdf.set_font('DGUVMeta-Bold', '', 10)
+        pdf.set_text_color(35, 31, 32)
+        pdf.set_xy(12.7, 256.5)
+        pdf.cell(0, 0, str(data.get("entfernung") + " Meter"))
 
 pdf.output("arbeitanmaschinen.pdf", "F")
