@@ -57,6 +57,12 @@ data["ort_der_freischaltung"] = input.get('#/properties/edid693e96632ce48548a14e
 
 data["schalten_verboten"] = input.get('#/properties/edi5e1db87b6ba84b9480d006df28e6150c')
 
+# 3
+
+data["spannungspruefer"] = input.get('#/properties/edica7f37a7fd3546b1bbe137efc4e0c920')
+data["rueckspannung"] = input.get('#/properties/edi8c6b921bfaad450d968cf330bc85f998')
+data["usv"] = input.get('#/properties/edie2a09ff90b8d420b8ccad52756e2e9aa')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
