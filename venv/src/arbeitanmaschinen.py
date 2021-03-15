@@ -69,6 +69,14 @@ elif data["ort_der_freischaltung"] == "Unterverteilung/Stromkreis":
 else:
     data["ort_nroderbezeichnung"] = "/"
 
+# 2
+
+data["sicherungsart"] = input.get('#/properties/edi24a2debaffea4b28a214b41c730e75ce')
+data["schalten_verboten"] = input.get('#/properties/edifa1a1d574a4149c48b2d1bedcf0ccd29')
+
+# 3a
+
+data["spannungspruefer3a"] = input.get('#/properties/edi9eff5b18dc154de8895dbba3cc192249')
 
 # Title
 
@@ -182,35 +190,37 @@ pdf.cell(0, 0, 'Nr. oder Bezeichnung: %s' % data.get("ort_nroderbezeichnung"))
 
 # 2 Gegen Wiedereinschalten gesichert
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 75)
-pdf.cell(0, 0, 'Wie erfolgte die Sicherung?')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 77.5)
+pdf.cell(0, 0, 'Wie wurde gesichert?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 80)
-pdf.cell(0, 0, 'Steuersicherung entfernt')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 82.5)
+pdf.cell(0, 0, data.get("sicherungsart"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 90)
-pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten"')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 89)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 95)
-pdf.cell(0, 0, 'zusätzlich angebracht?')
-
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 100)
-pdf.cell(0, 0, 'magnetisch')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 94)
+pdf.cell(0, 0, data.get("schalten_verboten"))
 
 # 3a Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 122)
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 136)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 127)
-pdf.cell(0, 0, '3M Voltage Meter x559m')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 141)
+pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
 # 3b Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
 
