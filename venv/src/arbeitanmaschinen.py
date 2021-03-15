@@ -82,6 +82,14 @@ data["spannungspruefer3a"] = input.get('#/properties/edi9eff5b18dc154de8895dbba3
 
 data["spannungspruefer3b"] = input.get('#/properties/edi0ac2a3989a8842ddabc390e36d247b0c')
 
+# 4
+
+data["euk_wo_eingebaut"] = input.get('#/properties/edid71302b946564be499c7e42f695fb8f3')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edia43c3a5ad80d4790b1147518bef5a5b2')
+else:
+    data["geerdet_begruendung"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -239,25 +247,28 @@ pdf.cell(0, 0, data.get("spannungspruefer3b"))
 
 # 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 187)
-pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung')
+# 4 Geerdet und kurzgeschlossen
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 193)
-pdf.cell(0, 0, 'eingebaut?')
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 189)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 198)
-pdf.cell(0, 0, 'in die NH-Sicherungsunterteile')
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 194)
+pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
 
-pdf.set_font('Arial', '', 14)
-pdf.set_xy(108, 208)
-pdf.cell(0, 0, 'Begründung:')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35,31,32)
+    pdf.set_xy(12.7, 200.5)
+    pdf.cell(0, 0, 'Begründung:')
 
-pdf.set_font('Arial', 'u', 14)
-pdf.set_xy(108, 213)
-pdf.cell(0, 0, 'Weil ichs kann')
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 205.5)
+    pdf.cell(0, 0, data.get("geerdet_begruendung"))
 
 # 5 Mit der Abdeckung soll erreicht werden
 
