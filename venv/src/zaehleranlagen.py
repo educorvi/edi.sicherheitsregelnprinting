@@ -198,6 +198,29 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 138)
 pdf.cell(0, 0, data.get("usv"))
 
+# 4 Geerdet und kurzgeschlossen
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 189)
+pdf.cell(0, 0, 'Wurde eine EuK-Vorrichtung eingebaut, z. B. im HAK?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 194)
+pdf.cell(0, 0, data.get("euk"))
+
+if data["euk"] == "nicht geerdet und kurzgeschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35,31,32)
+    pdf.set_xy(12.7, 200.5)
+    pdf.cell(0, 0, 'Begründung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 205.5)
+    pdf.cell(0, 0, data.get("geerdet_begruendung"))
+
 
 
 pdf.output("zaehleranlagen.pdf", "F")
