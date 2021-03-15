@@ -104,6 +104,11 @@ else:
 data["schloss2a"] = input.get('#/properties/edi6b58b8a2d67a43b69428560b9814730b')
 data["schalten_verboten2a"] = input.get('#/properties/edie1a1691433504d06ada6e73dbe580d80')
 
+# 2B
+
+data["schloss2b"] = input.get('#/properties/edibd10b6f4f90a4786b3753ed927e45f44')
+data["schalten_verboten2b"] = input.get('#/properties/edie9bfd532c7724f989e9841c8dc9b8425')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
