@@ -41,6 +41,18 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
+# Title
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 63.25)
+pdf.cell(0, 0, 'Arbeiten an Kabeln in der Niederspannung')
+
+pdf.set_font('DGUVMeta-Bold', '', 14)
+pdf.set_text_color(0,140,142)
+pdf.set_xy(12.7, 83.5)
+pdf.cell(0, 0, 'EVU')
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
