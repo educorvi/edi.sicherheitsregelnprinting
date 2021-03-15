@@ -41,6 +41,30 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
+# 1
+
+data["art_der_freischaltung"] = input.get('#/properties/edidd3eb380f631414b905fb8e056a0918b')
+
+if data["art_der_freischaltung"] == "NH-Sicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edif626707d3b324fe1ab85fd1bc86cc8e9')
+elif data["art_der_freischaltung"] == "NH-Lastschaltleister":
+    data["ausloesestrom"] = input.get('#/properties/edib889a8d4a3b14e3d9d382d7c1508636b')
+elif data["art_der_freischaltung"] == "Leistungsschalter":
+    data["ausloesestrom"] = input.get('#/properties/edi4efaaefb3fc54ad8b0185b34a5fa7b71')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edi7f46d0a548664790a147b33f9bd869ce')
+
+if data["ort_der_freischaltung"] == "Trafostation":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edid17835b08e254f06a1977660b2890a49')
+elif data["ort_der_freischaltung"] == "Umspannwerk/-anlage":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edi1ceb77541181414f9ceff5f32a69edb7')
+elif data["ort_der_freischaltung"] == "Kabelverteilerschrank":
+    data["ort_nroderbezeichnung"] = input.get('#/properties/edie90ea64ade3844f2aab5ee5427a88927')
+else:
+    data["ort_nroderbezeichnung"] = "/"
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -112,6 +136,7 @@ pdf.cell(0, 0, "nein")
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
+
 
 #Adding new page
 
