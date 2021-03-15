@@ -83,6 +83,21 @@ if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
 else:
     data["geerdet_begruendung"] = ""
 
+# 5
+
+data["ziel_der_abdeckung"] = input.get('#/properties/edic4983627bca3448dab434de87ba9778b')
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edi12517bfa3f0644479bf39931b29e6d45'))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edic067c6dc4a72401bb697b8aef743229b'))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edicfeb2bd66f854a7e9041a54994386181')
+    if data.get("art_der_abdeckung") == "die Entfernung beträgt ca.:":
+        data["entfernung"] = input.get('#/properties/ediea229e19846b4aedaabc8564a212b4ff')
+else:
+    data["art_der_abdeckung"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -258,6 +273,55 @@ if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
     pdf.set_text_color(0, 0, 0)
     pdf.set_xy(12.7, 205.5)
     pdf.cell(0, 0, data.get("geerdet_begruendung"))
+
+# 5 Mit der Abdeckung soll erreicht werden
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 235)
+pdf.cell(0, 0, 'Mit der Abdeckung soll erreicht werden:')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 240)
+pdf.cell(0, 0, data.get("ziel_der_abdeckung"))
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 246.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 251.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 246.5)
+    pdf.cell(0, 0, 'Art der Abdeckung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 251.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 246.5)
+    pdf.cell(0, 0, 'Keine Abdeckung angebracht, weil:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 251.5)
+    pdf.cell(0, 0, data.get("art_der_abdeckung"))
+
+    if data.get("art_der_abdeckung") == "die Entfernung beträgt ca.:":
+        pdf.set_font('DGUVMeta-Normal', '', 10)
+        pdf.set_text_color(35, 31, 32)
+        pdf.set_xy(12.7, 256.5)
+        pdf.cell(0, 0, str(data.get("entfernung") + " Meter"))
 
 
 

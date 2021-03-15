@@ -327,7 +327,7 @@ elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
     pdf.cell(0, 0, data.get("art_der_abdeckung"))
 
     if data.get("art_der_abdeckung") == "die Entfernung beträgt ca.:":
-        pdf.set_font('DGUVMeta-Bold', '', 10)
+        pdf.set_font('DGUVMeta-Normal', '', 10)
         pdf.set_text_color(35, 31, 32)
         pdf.set_xy(12.7, 256.5)
         pdf.cell(0, 0, str(data.get("entfernung") + " Meter"))
