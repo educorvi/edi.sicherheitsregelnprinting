@@ -41,6 +41,23 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "nein
 else:
     data["abgrenzung_arbeitsbereich_nein"] = ""
 
+# Title
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 58.5)
+pdf.cell(0, 0, 'Arbeiten an Schaltanlagen der Niederspannung,')
+
+pdf.set_font('DGUVMeta-Bold', '', 20)
+pdf.set_text_color(0,73,148)
+pdf.set_xy(12.7, 68)
+pdf.cell(0, 0, 'z. B. KVS, Trafostation')
+
+pdf.set_font('DGUVMeta-Bold', '', 14)
+pdf.set_text_color(0,140,142)
+pdf.set_xy(12.7, 83.5)
+pdf.cell(0, 0, 'EVU')
+
 # Kopffragen
 
 pdf.set_font('DGUVMeta-Normal', '', 14)
@@ -95,6 +112,11 @@ pdf.cell(0, 0, "nein")
 pdf.set_font('DGUVMeta-Normal', '', 14)
 pdf.set_xy(72.2, 231.6)
 pdf.cell(0, 0, data.get("abgrenzung_arbeitsbereich_nein"))
+
+#Adding new page
+
+pdf.add_page()
+pdf.image("newtemplate1_seite2.jpg", x=-4, y=-8, w=217, h=313)
 
 
 pdf.output("evu_niederspannungsschaltanlagen.pdf", "F")
