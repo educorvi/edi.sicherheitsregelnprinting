@@ -1,5 +1,5 @@
 import pprint
-from example import data2
+from importdata import evu_niederspannungsschaltanlagen as importation
 
 pp = pprint.PrettyPrinter(indent=2)
-pp.pprint(data2)
+pp.pprint(importation)
