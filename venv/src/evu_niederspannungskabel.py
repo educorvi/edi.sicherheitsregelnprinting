@@ -99,6 +99,11 @@ if data["zusaetzlichfreigeschaltet1b"] == ['im Hausanschlusskasten (wegen dezent
 else:
     data["zusaetzlichfreigeschaltet1b"] = ''
 
+# 2A
+
+data["schloss2a"] = input.get('#/properties/edi6b58b8a2d67a43b69428560b9814730b')
+data["schalten_verboten2a"] = input.get('#/properties/edie1a1691433504d06ada6e73dbe580d80')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
