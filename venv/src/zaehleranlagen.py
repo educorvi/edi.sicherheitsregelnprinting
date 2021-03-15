@@ -140,6 +140,18 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 55)
 pdf.cell(0, 0, data.get("ort_der_freischaltung"))
 
+# 2 Gegen Wiedereinschalten gesichert
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 77.5)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 82.5)
+pdf.cell(0, 0, data.get("schalten_verboten"))
+
 
 
 pdf.output("zaehleranlagen.pdf", "F")
