@@ -36,6 +36,24 @@ if input.get('#/properties/stehen-andere-anlagenteile-weiterhin-unter') == "ja":
 else:
     data["abgrenzung_arbeitsbereich_ja"] = ""
 
+# 1
+
+data["art_der_freischaltung"] = input.get('#/properties/edi913c7b7064874fe788ced88ff0566392')
+
+if data["art_der_freischaltung"] == "NH-Sicherungen":
+    data["ausloesestrom"] = input.get('#/properties/ediac93b1a15dc34f6faa18c203f9a00049')
+elif data["art_der_freischaltung"] == "Schraubsicherungen":
+    data["ausloesestrom"] = input.get('#/properties/edic96044edb86143c6855f5b0a89d33577')
+elif data["art_der_freischaltung"] == "SLS-Schalter":
+    data["ausloesestrom"] = input.get('#/properties/edi32d649c1c4fb422f8c868e47f905f7d0')
+elif data["art_der_freischaltung"] == "Trenner geöffnet":
+    data["ausloesestrom"] = input.get('#/properties/edi898bfa6b08564c569e22437b853b6632')
+else:
+    data["ausloesestrom"] = "/"
+
+data["ort_der_freischaltung"] = input.get('#/properties/edid693e96632ce48548a14e9215ba73a34')
+
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
