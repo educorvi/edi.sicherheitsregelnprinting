@@ -75,6 +75,14 @@ data["entzogene_nhsicherungen"] = input.get('#/properties/edi551233029165465ea73
 
 data["spannungspruefer"] = input.get('#/properties/edifa5cf2794b5b4e0c92096e2ce203fe06')
 
+# 4
+
+data["euk_wo_eingebaut"] = input.get('#/properties/edi3878f261fc78423abdd4d1c757dd41be')
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    data["geerdet_begruendung"] = input.get('#/properties/edi85ef572ed38942de9bae6cb1d39a4adb')
+else:
+    data["geerdet_begruendung"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
@@ -227,6 +235,30 @@ pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 141)
 pdf.cell(0, 0, data.get("spannungspruefer"))
+
+# 4 Geerdet und kurzgeschlossen
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 189)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung eingebaut?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 194)
+pdf.cell(0, 0, data.get("euk_wo_eingebaut"))
+
+if data["euk_wo_eingebaut"] == "Nicht geerdet und kurzgeschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35,31,32)
+    pdf.set_xy(12.7, 200.5)
+    pdf.cell(0, 0, 'Begründung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 205.5)
+    pdf.cell(0, 0, data.get("geerdet_begruendung"))
+
 
 
 pdf.output("evu_niederspannungsschaltanlagen.pdf", "F")
