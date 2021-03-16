@@ -109,6 +109,10 @@ data["schalten_verboten2a"] = input.get('#/properties/edie1a1691433504d06ada6e73
 data["schloss2b"] = input.get('#/properties/edibd10b6f4f90a4786b3753ed927e45f44')
 data["schalten_verboten2b"] = input.get('#/properties/edie9bfd532c7724f989e9841c8dc9b8425')
 
+# 3A
+
+data["spannungspruefer3a"] = input.get('#/properties/edi2ab6fcfb494f483bbc0d3bc735e7d8cd')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
