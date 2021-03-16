@@ -133,6 +133,21 @@ data["euk_wo"] = input.get('#/properties/edice9c36613f404d818c5f11a72028d86e')
 if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
     data["euk_begruendung"] = input.get('#/properties/edi32732bbb05eb4ad6a23ad8ca3a6ce6af')
 
+# 5
+
+data["ziel_der_abdeckung"] = input.get('#/properties/edi083dd47e5405445d9d452b34d5bfd82c')
+
+if data["ziel_der_abdeckung"] == "teilweiser Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edic7f067d9bb594c618d6d8c5d96b1d9fc'))
+elif data["ziel_der_abdeckung"] == "vollständiger Berührungsschutz":
+    data["art_der_abdeckung"] = ', '.join(input.get('#/properties/edi18d247e0ad8f4e90b205425be8b4f259'))
+elif data["ziel_der_abdeckung"] == "Abdeckung nicht notwendig":
+    data["art_der_abdeckung"] = input.get('#/properties/edifa3e5b24ed8a433ea4f2b63fa2c9407f')
+    if data.get("art_der_abdeckung") == "die Entfernung beträgt ca.:":
+        data["entfernung"] = input.get('#/properties/edi448aa2c4d1dc4141bbe961fa1456cab2')
+else:
+    data["art_der_abdeckung"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
