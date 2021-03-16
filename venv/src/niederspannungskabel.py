@@ -103,9 +103,9 @@ data["sicherungsart2b"] = input.get('#/properties/edi8d73b9ab15f745a2ba818fbff94
 data["schloss2b"] = input.get('#/properties/edia339c41b72c74c01a6e0165eec4b0b10')
 data["schalten_verboten2b"] = input.get('#/properties/edi6f75580051fe46818f92df966464667e')
 
-# 3A
+    # 3A
 
-data["spannungspruefer3a"] = input.get('#/properties/edi571f6a3a096845bcafca86ab6739ddcd')
+    data["spannungspruefer3a"] = input.get('#/properties/edi571f6a3a096845bcafca86ab6739ddcd')
 
 # 3B
 
