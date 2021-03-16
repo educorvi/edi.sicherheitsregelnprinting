@@ -361,4 +361,28 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 27)
 pdf.cell(0, 0, data.get("spannungspruefer3b"))
 
+# 3c Spannungsfreiheit allpolig festgestellt an der Arbeitsstelle
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 50)
+pdf.cell(0, 0, 'Wie wurde geprüft?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 55)
+pdf.cell(0, 0, data.get("pruefungsart3c"))
+
+if data["pruefungsart3c"] == "Andere Methode":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 61.5)
+    pdf.cell(0, 0, 'Erläuterung der Methode')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 66.5)
+    pdf.cell(0, 0, data.get("erlauterung3c"))
+
+
 pdf.output("evu_niederspannungskabel.pdf", "F")
