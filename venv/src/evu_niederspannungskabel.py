@@ -335,6 +335,11 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 261)
 pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
+# Adding new page
+
+pdf.add_page()
+pdf.image("newtemplate7_seite3.jpg", x=-4, y=-8, w=217, h=313)
+
 # 3b Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle 2
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
