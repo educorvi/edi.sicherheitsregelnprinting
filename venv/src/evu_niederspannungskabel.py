@@ -293,4 +293,26 @@ pdf.set_text_color(0,0,0)
 pdf.set_xy(12.7, 161)
 pdf.cell(0, 0, data.get("schalten_verboten2a"))
 
+# 2b Gegen Wiedereinschalten gesichert Ausschaltstelle 2
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 193)
+pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am (Leistungs-) Schalter eingehängt und abgeschlossen?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 198)
+pdf.cell(0, 0, data.get("schloss2b"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 204.5)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 209.5)
+pdf.cell(0, 0, data.get("schalten_verboten2b"))
+
 pdf.output("evu_niederspannungskabel.pdf", "F")
