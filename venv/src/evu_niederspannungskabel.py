@@ -113,6 +113,10 @@ data["schalten_verboten2b"] = input.get('#/properties/edie9bfd532c7724f989e9841c
 
 data["spannungspruefer3a"] = input.get('#/properties/edi2ab6fcfb494f483bbc0d3bc735e7d8cd')
 
+# 3B
+
+data["spannungspruefer3b"] = input.get('#/properties/edi8c4fababb3cd4426894252045c83d088')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
