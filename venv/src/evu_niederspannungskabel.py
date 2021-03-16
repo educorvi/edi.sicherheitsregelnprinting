@@ -344,12 +344,12 @@ pdf.image("newtemplate7_seite3.jpg", x=-4, y=-8, w=217, h=313)
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 281)
+pdf.set_xy(12.7, 22)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 274)
+pdf.set_xy(12.7, 27)
 pdf.cell(0, 0, data.get("spannungspruefer3b"))
 
 pdf.output("evu_niederspannungskabel.pdf", "F")
