@@ -271,4 +271,26 @@ if data["zusaetzlichfreigeschaltet1b"] == 'im Hausanschlusskasten (wegen dezentr
 else:
     data["zusaetzlichfreigeschaltet1b"] = ''
 
+# 2a Gegen Wiedereinschalten gesichert Ausschaltstelle 1
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 144.5)
+pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am (Leistungs-) Schalter eingehängt und abgeschlossen?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 149.5)
+pdf.cell(0, 0, data.get("schloss2a"))
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 156)
+pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 161)
+pdf.cell(0, 0, data.get("schalten_verboten2a"))
+
 pdf.output("evu_niederspannungskabel.pdf", "F")
