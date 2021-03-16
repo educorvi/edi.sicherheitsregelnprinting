@@ -286,7 +286,6 @@ def create_pdf(input):
             pdf.set_xy(12.7, 256.5)
             pdf.cell(0, 0, str(data.get("entfernung") + " Meter"))
 
-
     pdf.output("s136.pdf", "F")
 
 if __name__ == "__main__":
