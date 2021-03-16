@@ -117,6 +117,15 @@ data["spannungspruefer3a"] = input.get('#/properties/edi2ab6fcfb494f483bbc0d3bc7
 
 data["spannungspruefer3b"] = input.get('#/properties/edi8c4fababb3cd4426894252045c83d088')
 
+# 3C
+
+data["pruefungsart3c"] = input.get('#/properties/edib201ffc9d8154fd5ba5982f8c1e9ad7a')
+
+if data["pruefungsart3c"] == "Andere Methode":
+    data["erlauterung3c"] = input.get('#/properties/edi8b65c32610b7485aa4475e7aea8921b5')
+else:
+    data["erlauterung3c"] = ""
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
