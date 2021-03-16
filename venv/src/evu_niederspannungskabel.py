@@ -283,68 +283,68 @@ else:
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 144.5)
+pdf.set_xy(12.7, 147.5)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am (Leistungs-) Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 149.5)
+pdf.set_xy(12.7, 152.5)
 pdf.cell(0, 0, data.get("schloss2a"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 156)
+pdf.set_xy(12.7, 159)
 pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 161)
+pdf.set_xy(12.7, 164)
 pdf.cell(0, 0, data.get("schalten_verboten2a"))
 
 # 2b Gegen Wiedereinschalten gesichert Ausschaltstelle 2
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 193)
+pdf.set_xy(12.7, 196)
 pdf.cell(0, 0, 'Wurde ein Vorhängeschloss am (Leistungs-) Schalter eingehängt und abgeschlossen?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 198)
+pdf.set_xy(12.7, 201)
 pdf.cell(0, 0, data.get("schloss2b"))
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 204.5)
+pdf.set_xy(12.7, 207.5)
 pdf.cell(0, 0, 'Wurde ein Schild "Schalten verboten" zusätzlich angebracht?')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 209.5)
+pdf.set_xy(12.7, 212.5)
 pdf.cell(0, 0, data.get("schalten_verboten2b"))
 
 # 3a Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle1
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 253)
+pdf.set_xy(12.7, 256)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 258)
+pdf.set_xy(12.7, 261)
 pdf.cell(0, 0, data.get("spannungspruefer3a"))
 
 # 3b Spannungsfreiheit allpolig festgestellt an der Ausschaltstelle 2
 
 pdf.set_font('DGUVMeta-Bold', '', 10)
 pdf.set_text_color(35,31,32)
-pdf.set_xy(12.7, 278)
+pdf.set_xy(12.7, 281)
 pdf.cell(0, 0, 'Zweipoliger Spannungsprüfer:')
 
 pdf.set_font('DGUVMeta-Normal', '', 10)
 pdf.set_text_color(0,0,0)
-pdf.set_xy(12.7, 271)
+pdf.set_xy(12.7, 274)
 pdf.cell(0, 0, data.get("spannungspruefer3b"))
 
 pdf.output("evu_niederspannungskabel.pdf", "F")
