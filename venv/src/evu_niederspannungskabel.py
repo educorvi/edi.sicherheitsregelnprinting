@@ -391,5 +391,28 @@ if data["pruefungsart3c"] == "Andere Methode":
     pdf.set_xy(12.7, 66.5)
     pdf.cell(0, 0, data.get("erlauterung3c"))
 
+# 4 Geerdet und kurzgeschlossen an den Ausschaltstellen
+
+pdf.set_font('DGUVMeta-Bold', '', 10)
+pdf.set_text_color(35,31,32)
+pdf.set_xy(12.7, 94)
+pdf.cell(0, 0, 'Wo wurde die EuK-Vorrichtung in die NH-Sicherungsunterteile eingebaut?')
+
+pdf.set_font('DGUVMeta-Normal', '', 10)
+pdf.set_text_color(0,0,0)
+pdf.set_xy(12.7, 99)
+pdf.cell(0, 0, data.get("euk_wo"))
+
+if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
+    pdf.set_font('DGUVMeta-Bold', '', 10)
+    pdf.set_text_color(35, 31, 32)
+    pdf.set_xy(12.7, 105.5)
+    pdf.cell(0, 0, 'Begründung:')
+
+    pdf.set_font('DGUVMeta-Normal', '', 10)
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(12.7, 110.5)
+    pdf.cell(0, 0, data.get("euk_begruendung"))
+
 
 pdf.output("evu_niederspannungskabel.pdf", "F")
