@@ -126,6 +126,13 @@ if data["pruefungsart3c"] == "Andere Methode":
 else:
     data["erlauterung3c"] = ""
 
+# 4
+
+data["euk_wo"] = input.get('#/properties/edice9c36613f404d818c5f11a72028d86e')
+
+if data["euk_wo"] == "Nicht geerdet und kurzentschlossen":
+    data["euk_begruendung"] = input.get('#/properties/edi32732bbb05eb4ad6a23ad8ca3a6ce6af')
+
 # Title
 
 pdf.set_font('DGUVMeta-Bold', '', 20)
