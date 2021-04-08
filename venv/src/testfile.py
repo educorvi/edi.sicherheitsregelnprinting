@@ -4,7 +4,9 @@ fiverules = requests.get('https://devella.uv-kooperation.de/fiverules/s143')
 s143 = fiverules.json()
 s143_ui = s143["ui"]
 
-for i in s143_ui["elements"]:
+fieldslist = []
+
+for i in s143_ui["elements"][0]["elements"]:
     field = i["scope"]
     fieldid = field
     field = dict()
@@ -12,6 +14,7 @@ for i in s143_ui["elements"]:
     fieldid = fieldid.split("/")
     fieldid = fieldid[2]
 
+    field["id"] = fieldid
     field["title"] = s143["form"]["properties"][fieldid]["title"]
     field["type"] = s143["form"]["properties"][fieldid]["type"]
 
@@ -19,5 +22,7 @@ for i in s143_ui["elements"]:
         field["required"] = True
     else:
         field["required"] = False
+
+    fieldslist.append(field)
 
     import pdb; pdb.set_trace()
