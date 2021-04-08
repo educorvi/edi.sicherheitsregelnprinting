@@ -8,9 +8,15 @@ fieldslist = []
 
 variable = 0
 for k in s143_ui["elements"]:
+    #import pdb; pdb.set_trace()
     fieldset = dict()
-    fieldset[k["type"]] = dict()
-    import pdb; pdb.set_trace()
+    fieldset["fieldsettype"] = k["type"]
+    try:
+        fieldset["fieldsetname"] = k["label"]
+    except:
+        pass
+    fieldset["fields"] = dict()
+    #import pdb; pdb.set_trace()
     internalfields = []
     for i in k["elements"]:
         #import pdb; pdb.set_trace()
@@ -33,7 +39,7 @@ for k in s143_ui["elements"]:
         internalfields.append(field)
         #import pdb; pdb.set_trace()
         #variable = variable + 1
-    fieldset[k["type"]] = internalfields
+    fieldset["fields"] = internalfields
     fieldslist.append(fieldset)
 
 import pdb; pdb.set_trace()
