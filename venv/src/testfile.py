@@ -6,23 +6,30 @@ s143_ui = s143["ui"]
 
 fieldslist = []
 
-for i in s143_ui["elements"][0]["elements"]:
-    field = i["scope"]
-    fieldid = field
-    field = dict()
+variable = 0
+for i in s143_ui["elements"]:
 
-    fieldid = fieldid.split("/")
-    fieldid = fieldid[2]
+    for i in s143_ui["elements"][variable]["elements"]:
+        field = i["scope"]
+        fieldid = field
+        field = dict()
 
-    field["id"] = fieldid
-    field["title"] = s143["form"]["properties"][fieldid]["title"]
-    field["type"] = s143["form"]["properties"][fieldid]["type"]
+        fieldid = fieldid.split("/")
+        fieldid = fieldid[2]
 
-    if fieldid in s143["form"]["required"]:
-        field["required"] = True
-    else:
-        field["required"] = False
+        field["id"] = fieldid
+        field["title"] = s143["form"]["properties"][fieldid]["title"]
+        field["type"] = s143["form"]["properties"][fieldid]["type"]
 
-    fieldslist.append(field)
+        if fieldid in s143["form"]["required"]:
+            field["required"] = True
+        else:
+            field["required"] = False
+
+        fieldslist.append(field)
+
+        variable = variable + 1
 
     import pdb; pdb.set_trace()
+
+print(fieldslist)
