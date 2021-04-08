@@ -5,11 +5,15 @@ s143 = fiverules.json()
 s143_ui = s143["ui"]
 
 fieldslist = []
+internalfields = []
 
 variable = 0
-for i in s143_ui["elements"]:
-    import pdb; pdb.set_trace()
+for k in s143_ui["elements"]:
+    fieldset = dict()
+    fieldset[k["type"]] = dict()
+    #import pdb; pdb.set_trace()
     for i in s143_ui["elements"][variable]["elements"]:
+        #import pdb; pdb.set_trace()
         field = i["scope"]
         fieldid = field
         field = dict()
@@ -26,8 +30,10 @@ for i in s143_ui["elements"]:
         else:
             field["required"] = False
 
-        fieldslist.append(field)
-
+        internalfields.append(field)
+    fieldset[k["type"]] = internalfields
+    fieldslist.append(fieldset)
     variable = variable + 1
 
+#import pdb; pdb.set_trace()
 print(fieldslist)
