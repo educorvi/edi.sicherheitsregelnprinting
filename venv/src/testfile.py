@@ -1,9 +1,7 @@
 import requests
 
-fiverules = requests.get('https://ella.uv-kooperation.de/fiverules')
-fiverulesjson = fiverules.json()
-elektrohandwerk = fiverulesjson["services"][0]
-s143 = elektrohandwerk["services"][0]
+fiverules = requests.get('https://devella.uv-kooperation.de/fiverules/s143')
+s143 = fiverules.json()
 s143_ui = s143["ui"]
 
 for i in s143_ui["elements"]:
