@@ -8,7 +8,7 @@ fieldslist = []
 
 variable = 0
 for i in s143_ui["elements"]:
-
+    import pdb; pdb.set_trace()
     for i in s143_ui["elements"][variable]["elements"]:
         field = i["scope"]
         fieldid = field
@@ -28,8 +28,6 @@ for i in s143_ui["elements"]:
 
         fieldslist.append(field)
 
-        variable = variable + 1
-
-    import pdb; pdb.set_trace()
+    variable = variable + 1
 
 print(fieldslist)
