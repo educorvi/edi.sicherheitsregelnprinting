@@ -6,7 +6,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
-doc = SimpleDocTemplate("form_letter.pdf",pagesize=letter,
+doc = SimpleDocTemplate("reportlabtest.pdf",pagesize=letter,
                         rightMargin=72,leftMargin=72,
                         topMargin=72,bottomMargin=18)
 
@@ -15,7 +15,10 @@ s143 = fiverules.json()
 s143_ui = s143["ui"]
 
 fieldslist = []
+
 Story = []
+styles=getSampleStyleSheet()
+styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 
 variable = 0
 for k in s143_ui["elements"]:
@@ -61,6 +64,11 @@ for i in fieldslist:
         klaus = i["fieldsetname"]
     except:
         klaus = "Kopffragen"
-    pdf.cell(0, 0, klaus)
+    Story.append(Paragraph(klaus, styles["Heading2"]))
+    Story.append(Spacer(1, 12))
 
     for f in i["fields"]:
+        Story.append(Paragraph(f["title"], styles["Normal"]))
+        Story.append(Spacer(1, 12))
+
+doc.build(Story)
