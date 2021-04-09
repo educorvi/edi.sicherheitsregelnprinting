@@ -56,27 +56,11 @@ for k in s143_ui["elements"]:
 print(fieldslist)
 #import pdb; pdb.set_trace()
 
-pdf = FPDF(orientation='P', unit='mm', format='A4')
-pdf.add_page()
-
-height = 20
-height2 = 80
 for i in fieldslist:
-    pdf.set_font('Arial', '', 10)
-    pdf.set_text_color(0, 0, 0)
-    pdf.set_xy(20, height)
     try:
         klaus = i["fieldsetname"]
     except:
         klaus = "Kopffragen"
     pdf.cell(0, 0, klaus)
-    height = height + 10
 
     for f in i["fields"]:
-        pdf.set_font('Arial', '', 10)
-        pdf.set_text_color(0, 0, 0)
-        pdf.set_xy(20, height2)
-        pdf.cell(0, 0, f["title"])
-        height2 = height2 + 5
-
-pdf.output("s143.pdf", "F")
