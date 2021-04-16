@@ -78,7 +78,7 @@ for i in fieldslist:
         Story.append(Paragraph(f["title"], styles["Normal"]))
         try:
             if isinstance(f["result"], list):
-                Story.append(Paragraph(', '.join(str(f["result"])), styles["Normal"]))
+                Story.append(Paragraph(', '.join(f["result"]), styles["Normal"]))
             else:
                 Story.append(Paragraph(str(f["result"]), styles["Normal"]))
         except:
