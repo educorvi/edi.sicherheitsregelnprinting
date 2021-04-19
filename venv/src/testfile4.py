@@ -66,7 +66,25 @@ for k in s143_ui["elements"]:
 print(fieldslist)
 #import pdb; pdb.set_trace()
 
+def fieldhandling(f):
+    Story.append(Paragraph(f["title"], styles["Normal"]))
+    try:
+        if isinstance(f["result"], list):
+            Story.append(Paragraph(', '.join(f["result"]), styles["Normal"]))
+        else:
+            Story.append(Paragraph(str(f["result"]), styles["Normal"]))
+    except:
+        pass
+    Story.append(Spacer(1, 8))
+
+Story = []
+logo = "logo.png"
+im = Image(logo, 6.5 * inch, 3 * inch)
+t = Story.append(im)
+
 for i in fieldslist:
+
+    # Fieldset
     try:
         klaus = i["fieldsetname"]
     except:
@@ -75,14 +93,6 @@ for i in fieldslist:
     Story.append(Spacer(1, 12))
 
     for f in i["fields"]:
-        Story.append(Paragraph(f["title"], styles["Normal"]))
-        try:
-            if isinstance(f["result"], list):
-                Story.append(Paragraph(', '.join(f["result"]), styles["Normal"]))
-            else:
-                Story.append(Paragraph(str(f["result"]), styles["Normal"]))
-        except:
-            pass
-        Story.append(Spacer(1, 8))
+        fieldhandling(f)
 
 doc.build(Story)
