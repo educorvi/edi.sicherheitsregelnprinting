@@ -1,7 +1,9 @@
 import requests
 
 import time
-from reportlab.lib.enums import TA_JUSTIFY
+from reportlab.lib import colors
+from reportlab.lib.colors import Color, black, blue, red
+from reportlab.lib.enums import TA_JUSTIFY, TA_RIGHT, TA_CENTER, TA_LEFT
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -77,9 +79,12 @@ def fieldhandling(f):
         pass
     Story.append(Spacer(1, 8))
 
+bgblue = Color(5, 142, 149, alpha=0.5)
+styles.add(ParagraphStyle(name='Test', fontName ='Helvetica',fontSize=14, backColor = colors.blue, textColor=colors.white, alignment=TA_LEFT))
+
 Story = []
 logo = "logo.png"
-im = Image(logo, 6.5 * inch, 3 * inch)
+im = Image(logo, 6 * inch, 3 * inch)
 t = Story.append(im)
 
 for i in fieldslist:
@@ -89,7 +94,8 @@ for i in fieldslist:
         klaus = i["fieldsetname"]
     except:
         klaus = "Kopffragen"
-    Story.append(Paragraph(klaus, styles["Heading2"]))
+    #Story.append(Paragraph(klaus, styles["Heading2"]))
+    Story.append(Paragraph(klaus, styles["Test"]))
     Story.append(Spacer(1, 12))
 
     for f in i["fields"]:
