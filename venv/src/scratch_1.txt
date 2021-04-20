@@ -1,0 +1,4 @@
+Custom colors:
+
+bgblue = Color(5, 142, 149, alpha=0.5)
+styles.add(ParagraphStyle(name='Test', fontName ='Helvetica',fontSize=14, backColor = colors.blue, textColor=colors.white, alignment=TA_LEFT))

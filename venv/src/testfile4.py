@@ -27,7 +27,6 @@ styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 
 variable = 0
 for k in s143_ui["elements"]:
-    #import pdb; pdb.set_trace()
     fieldset = dict()
     fieldset["fieldsettype"] = k["type"]
     try:
@@ -35,10 +34,8 @@ for k in s143_ui["elements"]:
     except:
         pass
     fieldset["fields"] = dict()
-    #import pdb; pdb.set_trace()
     internalfields = []
     for i in k["elements"]:
-        #import pdb; pdb.set_trace()
         field = i["scope"]
         fieldid = field
         field = dict()
@@ -60,13 +57,10 @@ for k in s143_ui["elements"]:
             field["required"] = False
 
         internalfields.append(field)
-        #import pdb; pdb.set_trace()
-        #variable = variable + 1
     fieldset["fields"] = internalfields
     fieldslist.append(fieldset)
 
 print(fieldslist)
-#import pdb; pdb.set_trace()
 
 def fieldhandling(f):
     Story.append(Paragraph(f["title"], styles["Normal"]))
@@ -79,13 +73,20 @@ def fieldhandling(f):
         pass
     Story.append(Spacer(1, 8))
 
-bgblue = Color(5, 142, 149, alpha=0.5)
-styles.add(ParagraphStyle(name='Test', fontName ='Helvetica',fontSize=14, backColor = colors.blue, textColor=colors.white, alignment=TA_LEFT))
+def separator():
+    separator = ((".") * 164)
+    Story.append(Paragraph(separator, styles["Normal"]))
+    Story.append(Paragraph(klaus, styles["Heading2"]))
+    Story.append(Spacer(1, 12))
+
+def logo():
+    logo = "logo.png"
+    im = Image(logo, 100, 50)
+    Story.append(im)
 
 Story = []
-logo = "logo.png"
-im = Image(logo, 6 * inch, 3 * inch)
-t = Story.append(im)
+
+logo()
 
 for i in fieldslist:
 
@@ -94,9 +95,8 @@ for i in fieldslist:
         klaus = i["fieldsetname"]
     except:
         klaus = "Kopffragen"
-    #Story.append(Paragraph(klaus, styles["Heading2"]))
-    Story.append(Paragraph(klaus, styles["Test"]))
-    Story.append(Spacer(1, 12))
+
+    separator()
 
     for f in i["fields"]:
         fieldhandling(f)
